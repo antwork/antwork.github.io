@@ -1,0 +1,1024 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>XuQ&#39;s Blog</title>
+  <subtitle>Stay Hungry Stay Foolish</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://antwork.github.io/"/>
+  <updated>2017-01-21T10:27:49.000Z</updated>
+  <id>https://antwork.github.io/</id>
+  
+  <author>
+    <name>qxu</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello 2017</title>
+    <link href="https://antwork.github.io/2017/01/21/Hello-2017/"/>
+    <id>https://antwork.github.io/2017/01/21/Hello-2017/</id>
+    <published>2017-01-21T06:56:53.000Z</published>
+    <updated>2017-01-21T10:27:49.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>2017年的几个小目标</p>
+<ol>
+<li>当爸爸</li>
+<li>坚持每周跑步三次</li>
+<li>写更多的Blog, 反思, 分享<br><a id="more"></a>:    </li>
+</ol>
+<p><b>[写作]:</b>最近一直在做总结, 回想2016年我都做了什么, 对比下其他进步飞速的童鞋, 感觉自己进步颇少, 管理经验并没有增加很多, 编程方面也没有更加精进, 唯一的记忆就是在不断的写代码, 不断地发版, 不断地重构, 虽然做了很多的事, 但是总结的少了, 无法跳出来看自己, 日子也就浑浑噩噩的过去了. 希望2017年我能够有更多总结性的文字, 可以沉淀下我的想法, 加深思考的深度, 而不是回头时又一次发现自己还在很浅的地方兜圈转悠.</p>
+<p><b>[责任]:</b>奔三了, 我已不是那个稚嫩的骚年, 也没法一直做那个稚嫩的骚年了, 我希望有更多的当担, 能够为老婆, 为家庭分担更多, 也要努力让自己成长成一个大树, 为家遮风挡雨.</p>
+<p><b>[运动]:</b>跑步一直是个想法, 想了好多年了, 最近才开始实施, 因为感觉自己身体真是大不如前了, 就像湍急河流中的🐟, 如果不奋力的游, 就只能让自己一步步成为一个胖子. 不想被别人改变, 就努力改变自己. 向着更健康的生活迈进!!!</p>
+<p>2017年, 要过更有品质的生活!!!</p>
+<hr>
+<p>今天将老博客迁移了下， 从Jekyll换成了<a href="https://hexo.io/zh-cn/" target="_blank" rel="external">hexo</a>, 主题使用了<a href="https://www.haomwei.com/technology/maupassant-hexo.html" target="_blank" rel="external">maupassant</a>.</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;2017年的几个小目标&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;当爸爸&lt;/li&gt;
+&lt;li&gt;坚持每周跑步三次&lt;/li&gt;
+&lt;li&gt;写更多的Blog, 反思, 分享&lt;br&gt;
+    
+    </summary>
+    
+      <category term="生活" scheme="https://antwork.github.io/categories/%E7%94%9F%E6%B4%BB/"/>
+    
+    
+      <category term="2017" scheme="https://antwork.github.io/tags/2017/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flask后台</title>
+    <link href="https://antwork.github.io/2015/05/06/2015-05-06-flask-server/"/>
+    <id>https://antwork.github.io/2015/05/06/2015-05-06-flask-server/</id>
+    <published>2015-05-06T09:23:12.000Z</published>
+    <updated>2017-01-21T10:52:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>讲述Flask项目框架，【未完成】<br><a id="more"></a></p>
+<ol>
+<li>搭建框架,大型Flask项目框架</li>
+</ol>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="string">|-flasky</span></div><div class="line">  <span class="string">|-app/</span></div><div class="line">    <span class="string">|-templates/</span></div><div class="line">    <span class="string">|-static/</span></div><div class="line">    <span class="string">|-main/</span></div><div class="line">      <span class="string">|-__init__.py</span></div><div class="line">      <span class="string">|-errors.py</span></div><div class="line">      <span class="string">|-forms.py</span></div><div class="line">      <span class="string">|-views.py</span></div><div class="line">    <span class="string">|-__init__.py</span></div><div class="line">    <span class="string">|-email.py</span></div><div class="line">    <span class="string">|-models.py</span></div><div class="line">  <span class="string">|-migrations/</span></div><div class="line">  <span class="string">|-tests/</span></div><div class="line">    <span class="string">|-__init__.py</span></div><div class="line">    <span class="string">|-test*.py</span></div><div class="line">  <span class="string">|-venv/</span></div><div class="line">  <span class="string">|-requirements.txt</span></div><div class="line">  <span class="string">|-config.py</span></div><div class="line">  <span class="string">|-manage.py</span></div></pre></td></tr></table></figure>
+<ol>
+<li><p>配置数据库models</p>
+</li>
+<li><p>写api</p>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;讲述Flask项目框架，【未完成】&lt;br&gt;
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="Flask" scheme="https://antwork.github.io/tags/Flask/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>SQLAlchemy学习备份</title>
+    <link href="https://antwork.github.io/2015/05/06/2015-05-06-sqlalchemy-study/"/>
+    <id>https://antwork.github.io/2015/05/06/2015-05-06-sqlalchemy-study/</id>
+    <published>2015-05-06T08:49:12.000Z</published>
+    <updated>2017-01-21T07:59:37.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>参考资料来源:<br><a href="http://docs.sqlalchemy.org/en/rel_1_0/orm/tutorial.html" target="_blank" rel="external">http://docs.sqlalchemy.org/en/rel_1_0/orm/tutorial.html</a></p>
+<p>case1:<br>查询数据库中某些字段</p>
+<p>session.query(User.name, User.fullname)</p>
+<p>case2:<br>更换数据库返回的key<br>for row in session.query(User.name.label(‘name_label’)).all();<br>    print(row.name_label)</p>
+<p>case3:<br>偏移<br>for u in session.query(User).order_by(User.id)[1:3]:<br>    print u</p>
+<p>意思为limit2 offset 1,即偏移1位,取2个值</p>
+<p>case4:<br>filter_by(),使用关键词为key<br>    session.query(User.name).fitler_by(fullname=”Ed jone”) #这里是单等号</p>
+<p>fitler()<br>    session.query(User.name).filter(User.fullname==”Ed jone”) #这里是双等号</p>
+<p>多重filter意味着条件与AND<br>    session.query(User.name).filter(User.name==”Ed jone”).\<br>                             filter(User.fullname==”abc”)</p>
+<p>条件判断<br>等:<br>    query.filter(User.name == ‘ed’)</p>
+<p>不等:<br>    query.filter(User.name != ‘ed’)</p>
+<p>like:<br>    query.filter(User.name.like(‘%ed%%’))</p>
+<p>IN:<br>    query.filter(User.name.in_([‘ed’,’wendy’,’jack’]))</p>
+<pre><code># 潜逃
+query.filter(User.name.in_(
+    session.query(User.name).filter(User.name.like(&apos;%ed%&apos;))
+    ))
+</code></pre><p>NOT IN:<br>    query.filter(~User.name.in_([‘ed’,’ab’]))</p>
+<p>IS Null:<br>    query.filter(User.name == None)</p>
+<p>IS NOT NULL:<br>    query.filter(User.name != None)</p>
+<p>AND:</p>
+<pre><code>#方法1 使用and_
+from sqlalchemy import and_
+query.filter(and_(User.name==&apos;ed&apos;, User.fullname==&apos;ab&apos;))
+
+#方法2 使用多表达式
+query.filter(User.name == &apos;ed&apos;, User.fullname==&apos;bc&apos;)
+
+#方法3 串表达式
+query.filter(User.name==&apos;ed&apos;).fiter(User.fullname==&apos;bc&apos;)
+</code></pre><p>OR:<br>    from sqlachemy import or<em><br>    query.filter(or</em>(User.name==’ed’, User.name==’wendy’))</p>
+<p>MATCH:<br>    query.filter(User.name.match(‘wendy’))</p>
+<p>使用字面sql</p>
+<pre><code># 使用局部的sql条件
+from sqlalchemy import text
+from user in session.query(User).\
+            filter(text(&quot;id&lt;224&quot;)).\
+            order_by(text(&quot;id&quot;)).all():
+    print user.name
+
+关联参数,可以使用params()方法
+session.query(User).filter(text(&quot;id&lt;:value and name=:name&quot;)).\
+        params(value=224, name=&apos;fred&apos;).order_by(User.id).one()
+
+全string的sql语句查询
+session.query(User).from_statement(
+        text(&quot;SELECT * FROM users where name=:name&quot;)).\
+        params(name=&apos;ed&apos;).all()
+</code></pre><p>计数:<br>    session.query(User).filter(User.name.like(‘%ed’)).count()</p>
+<p>数据库关系:<br>one to many:<br>    在子表中添加foreignkey, 在父表中添加关系</p>
+<pre><code>class Parent(Base):
+    __tablename__ = &apos;parent&apos;
+    id = Column(Integer, primary_key=True)
+    children = relationship(&apos;Child&apos;)
+
+class Child(Base):
+    __tablename__ = &apos;child&apos;
+    id = Column(Integer, primary_key=True)
+    parent_id = Column(Integer, ForeignKey(&apos;parent.id&apos;))
+
+# 双向关系 bidirectional relationship 使用backref选项
+class Parent(Base):
+    __tablename__ = &apos;parent&apos;
+    id = Column(Integer, primary_key=True)
+    children = relationship(&quot;Child&quot;, backref=&quot;parent&quot;)
+
+class Child(Base):
+    __tablename = &apos;child&apos;
+    id = Column(Integer, primary_key=True)
+    parent_id = Column(Integer, ForeignKey(&apos;parent.id&apos;))
+</code></pre><p>Many to one:<br>    class Parent(Base):<br>        <strong>tablename</strong> = ‘parent’<br>        id = Column(Integer, primary_key = True)<br>        child_id = Column(Integer, ForeignKey(‘child.id’))<br>        child = relationship(‘Child’, backref=”parents”)</p>
+<pre><code>class Child(Base):
+    __tablename__ = &apos;child&apos;
+    id = Column(Integer, primary_key=True)
+</code></pre><p>One to one:<br>    方式一:<br>    class Parent(Base):<br>        <strong>talbename</strong> = ‘parent’<br>        id = Column(Integer, primary_key=True)<br>        child = relationship(‘Child’, uselist=False, backref=’parent’)</p>
+<pre><code>class Child(Base):
+    __tablename__ = &apos;child&apos;
+    id = Column(Integer, primary_key=True)
+    parent_id = Column(Integer, ForeignKey(&apos;parent.id&apos;))
+
+方式二: 
+
+class Parent(Base):
+    __tablename__ = &apos;parent&apos;
+    id = Column(Integer, primary_key=True)
+    child_id = Column(Integer, ForeignKey(&apos;child.id&apos;))
+    child = relationship(&quot;Child&quot;, backref=backref(&quot;parent&quot;, uselist=False))
+
+class Child(Base):
+        __tablename__ = &apos;child&apos;
+        id = Column(Integer, primary_key=True)
+</code></pre><p>Many-to-many:<br>    association_table = Table(‘association’, Base.metadata,<br>        Column(‘left_id’, Integer, ForeignKey(‘left.id’)),<br>        Column(‘right_id’, Integer, ForeignKey(‘right.id’))<br>    )</p>
+<pre><code>class Parent(Base):
+    __tablename__ = &apos;left&apos;
+    id = Column(Integer, primary_key=True)
+    children = relationship(&apos;Child&apos;, secondary =association_table)
+
+class Child(Base):
+    __tablename__ = &apos;right&apos;
+    id = Column(Integer, primary_key=True)
+
+# 双向关系
+association_table = Table(&apos;association&apos;, Base.metadata,
+    Column(&apos;left_id&apos;, Integer, ForeignKey(&apos;left.id&apos;)),
+    Column(&apos;right_id&apos;, Integer, ForeignKey(&apos;right.id&apos;))
+)
+
+class Parent(Base):
+    __tablename__ = &apos;left&apos;
+    id = Column(Integer, primary_key=True)
+    children = relationship(&quot;Child&quot;,
+                    secondary=association_table,
+                    backref=&quot;parents&quot;)
+
+class Child(Base):
+    __tablename__ = &apos;right&apos;
+    id = Column(Integer, primary_key=True)
+</code></pre><p>Bind parameters can be specified with string-based SQL, using a colon. To specify the values, use the params() method:</p>
+<pre><code>&gt;&gt;&gt; session.query(User).filter(text(&quot;id&lt;:value and name=:name&quot;)).\
+...     params(value=224, name=&apos;fred&apos;).order_by(User.id).one() 
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;参考资料来源:&lt;br&gt;&lt;a href=&quot;http://docs.sqlalchemy.org/en/rel_1_0/orm/tutorial.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://docs.sqlalchemy.org/en
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="flask, sqlalchemy" scheme="https://antwork.github.io/tags/flask-sqlalchemy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>git神图</title>
+    <link href="https://antwork.github.io/2015/05/06/2015-05-06-git/"/>
+    <id>https://antwork.github.io/2015/05/06/2015-05-06-git/</id>
+    <published>2015-05-06T06:02:12.000Z</published>
+    <updated>2017-01-21T10:51:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>一张git神图， 讲述基本的git操作<br><a id="more"></a></p>
+<p><a href="/assets/37923f2478edc5709b36562b26c9e008.png"><img src="/assets/37923f2478edc5709b36562b26c9e008.png" alt=""></a> </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;一张git神图， 讲述基本的git操作&lt;br&gt;
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="git" scheme="https://antwork.github.io/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sqlite3的使用1-操作</title>
+    <link href="https://antwork.github.io/2015/04/28/2015-04-28-sqlite-query/"/>
+    <id>https://antwork.github.io/2015/04/28/2015-04-28-sqlite-query/</id>
+    <published>2015-04-28T09:23:12.000Z</published>
+    <updated>2017-01-21T10:53:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>sqlite3的基本用法<br><a id="more"></a></p>
+<h3 id="sqlite3的操作"><a href="#sqlite3的操作" class="headerlink" title="sqlite3的操作"></a>sqlite3的操作</h3><figure class="highlight q"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> id <span class="keyword">from</span> foods <span class="built_in">where</span> name='jujyfruit'</div><div class="line">| 动词 | 主语        | 谓语                 |</div><div class="line"></div><div class="line"></div><div class="line">创建表</div><div class="line">--------------------------------------------</div><div class="line">==语法==</div><div class="line">create [temp|tempname] table table_name (column_definitions [, constraints]);</div><div class="line"></div><div class="line">==说明==</div><div class="line">使用temp或temporay关键字声明的表是临时表,这种表是临时的-只存活于当前对话,一旦连接断开,就会被自动销毁</div><div class="line"></div><div class="line">==示例==</div><div class="line">create table contacts (id integer, primary <span class="built_in">key</span>, </div><div class="line">						name text <span class="built_in">not</span> <span class="built_in">null</span> collate nocase,</div><div class="line">						phone text <span class="built_in">not</span> <span class="built_in">null</span> default 'UNKNOWN',</div><div class="line">						unique (name, phone));</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line">修改表</div><div class="line">-------------------------------------------</div><div class="line">==语法==</div><div class="line">alter table table_name &#123; rename to name | add column column_def &#125;</div><div class="line"></div><div class="line">==说明==</div><div class="line">花括号表示选择其中一项,实际使用不需要花括号,即要么重命名,要么添加</div><div class="line"></div><div class="line">==示例==</div><div class="line">sqlite&gt; alter table contacts</div><div class="line">		add column email text <span class="built_in">not</span> <span class="built_in">null</span> default '' collate nocase;</div><div class="line">sqlte&gt; .schema contacts</div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"></div><div class="line"><span class="keyword">select</span></div><div class="line">-------------------------------------------</div><div class="line"></div><div class="line">选择操作(一种关系)的输出可以是另一个<span class="keyword">select</span>语句的输入,如:</div><div class="line"><span class="keyword">select</span> name <span class="keyword">from</span> (<span class="keyword">select</span> name, type_id <span class="keyword">from</span> (<span class="keyword">select</span> * <span class="keyword">from</span> foods));</div><div class="line">里层的结果作为次层的输入</div><div class="line"></div><div class="line">sql命令的通用形式如下:</div><div class="line"></div><div class="line"><span class="keyword">select</span> [<span class="built_in">distinct</span>] heading</div><div class="line"><span class="keyword">from</span> <span class="built_in">tables</span></div><div class="line"><span class="built_in">group</span> <span class="keyword">by</span> columns</div><div class="line">having predicate</div><div class="line">order <span class="keyword">by</span> columns</div><div class="line">limit <span class="built_in">count</span>, offset;</div><div class="line"></div><div class="line">常用形式:</div><div class="line"><span class="keyword">select</span> heading <span class="keyword">from</span> <span class="built_in">tables</span> <span class="built_in">where</span> predicate;</div><div class="line"></div><div class="line">示例<span class="number">1</span>:</div><div class="line">sqlite&gt; <span class="keyword">select</span> id, name <span class="keyword">from</span> food_types;</div><div class="line"></div><div class="line">示例<span class="number">2</span>:</div><div class="line">sqlite&gt; <span class="keyword">select</span> * <span class="keyword">from</span> dogs <span class="built_in">where</span> color='purple' <span class="built_in">and</span> grin = 'toothy';</div><div class="line"></div><div class="line">操作符,包括*+- == != IN AND <span class="built_in">or</span>等</div><div class="line">操作符使用一个或多个输入并产生一个新值作为输出, 只所以叫'操作符',是因为它完成某种操作并产生结果.</div><div class="line">eg:</div><div class="line">x = <span class="built_in">count</span>(episodes.name) </div><div class="line">sqlite&gt; <span class="keyword">select</span> * <span class="keyword">from</span> foods <span class="built_in">where</span> name='july' <span class="built_in">and</span> type_id=<span class="number">9</span>;</div><div class="line"></div><div class="line"></div><div class="line">LIKE</div><div class="line">sqlite&gt; <span class="keyword">select</span> id, name <span class="keyword">from</span> foods <span class="built_in">where</span> name like 'J%';</div><div class="line"></div><div class="line">上例中表示匹配以J开头的食品</div><div class="line">模式中的百分号(%)相当于正则中的*,表示<span class="number">0</span>个或多个字符匹配</div><div class="line">下划线(_)可与任意单个字符匹配,相当于正则中的+</div><div class="line">sqlite&gt; <span class="keyword">select</span> id, name <span class="keyword">from</span> foods <span class="built_in">where</span> name like '%ac%p%';</div><div class="line">通过将%放入左边或右边来进行匹配</div><div class="line"></div><div class="line">NOT</div><div class="line">sqlite&gt; <span class="keyword">select</span> id, name <span class="keyword">from</span> foods <span class="built_in">where</span> name like '%ac%p%' <span class="built_in">and</span> name <span class="built_in">not</span> like '%Sch%';</div><div class="line"></div><div class="line">GLOB</div><div class="line">同like,不过匹配是大小写敏感,并且使用'*'来匹配<span class="number">0</span>到多个,'?'匹配单一字符</div><div class="line"></div><div class="line">限定和排序</div><div class="line"></div><div class="line">sqlite&gt; <span class="keyword">select</span> * <span class="keyword">from</span> food_types order <span class="keyword">by</span> id limit <span class="number">1</span> offset <span class="number">1</span>;</div><div class="line">sqlite&gt; <span class="keyword">select</span> * <span class="keyword">from</span> foods <span class="built_in">where</span> name like 'B%' order <span class="keyword">by</span> type_id <span class="built_in">desc</span>, name limit <span class="number">10</span>;</div><div class="line"></div><div class="line">sqlite&gt; <span class="keyword">select</span> * <span class="keyword">from</span> foods <span class="built_in">where</span> name like 'B%' order <span class="keyword">by</span> type_id <span class="built_in">desc</span>, name limit <span class="number">1</span> offset <span class="number">2</span>;</div><div class="line">等于下列,使用缩写时,offset总是优先于limit,不过个人感觉还是不要写缩写</div><div class="line">sqlite&gt; <span class="keyword">select</span> * <span class="keyword">from</span> foods <span class="built_in">where</span> name like 'B%' order <span class="keyword">by</span> type_id <span class="built_in">desc</span>, name limit <span class="number">2</span>, <span class="number">1</span>;</div><div class="line"></div><div class="line"></div><div class="line">limit:限制结果集大小</div><div class="line">offset:限制结果集范围</div><div class="line">注意:limit/offset不会加速查询</div><div class="line"></div><div class="line">Function和聚合</div><div class="line"><span class="built_in">upper</span>(), <span class="built_in">lower</span>(), abs(), <span class="built_in">count</span>()</div><div class="line"></div><div class="line">sqlite&gt; <span class="keyword">select</span> id, <span class="built_in">upper</span>(name), length(name) <span class="keyword">from</span> foods <span class="built_in">where</span> type_id =<span class="number">1</span> limit <span class="number">10</span></div><div class="line"></div><div class="line">结果</div><div class="line">id  <span class="built_in">upper</span>(name) length(name)</div><div class="line">--  ----------  ------------</div><div class="line"><span class="number">1</span>   BAGELS      <span class="number">6</span></div><div class="line"><span class="number">2</span>   BAGELS, RAI <span class="number">14</span></div><div class="line"></div><div class="line">函数可以是任意表达式的一部分,所以函数也可以用在WHERE子句中:</div><div class="line">sqlite&gt; <span class="keyword">select</span> id, <span class="built_in">upper</span>(name), length(name) <span class="keyword">from</span> foods <span class="built_in">where</span> length(name) &lt; <span class="number">5</span> limit <span class="number">5</span>;</div><div class="line"></div><div class="line">聚合是一类特殊的函数,它从一组记录中计算聚合值,标准的聚合函数包括<span class="built_in">sum</span>(), <span class="built_in">avg</span>(), <span class="built_in">count</span>(), <span class="built_in">min</span>(), <span class="built_in">max</span>(),</div><div class="line"></div><div class="line">示例:</div><div class="line">sqlite&gt; <span class="keyword">select</span> <span class="built_in">count</span>(*) <span class="keyword">from</span> foods <span class="built_in">where</span> type_id = <span class="number">1</span>;</div><div class="line"><span class="built_in">count</span>()返回关系中所有行的数目</div><div class="line"></div><div class="line">sqlite&gt; <span class="keyword">select</span> <span class="built_in">avg</span>(length(name)) <span class="keyword">from</span> foods;</div><div class="line"></div><div class="line">分组:</div><div class="line">聚合的主要部分就是分组,聚合不只是能够将计算整个结果集的聚合值,黑啊可以吧结果分为多个组,然后计算每个组的聚合值</div><div class="line">sqlite&gt; <span class="keyword">select</span> type_id <span class="keyword">from</span> foods <span class="built_in">group</span> <span class="keyword">by</span> type_id;</div><div class="line"><span class="built_in">group</span> <span class="keyword">by</span>查询到结果,然后将结果分为共享某个字段上同等值的小组,这些组再传递给<span class="keyword">select</span>子句.</div><div class="line"></div><div class="line">sqlite&gt; <span class="keyword">select</span> type_id, <span class="built_in">count</span>(*) <span class="keyword">from</span> foods <span class="built_in">group</span> <span class="keyword">by</span> type_id;</div><div class="line">type_id <span class="built_in">count</span>(*)</div><div class="line">------- -------</div><div class="line"><span class="number">1</span>       <span class="number">47</span></div><div class="line"><span class="number">2</span>       <span class="number">15</span></div><div class="line"></div><div class="line"><span class="built_in">group</span> <span class="keyword">by</span> 使用类似的值创建分组,但是没有在<span class="keyword">select</span>子句处理前过滤这些组,having具备这以功能, having 是一个可以应用到<span class="built_in">group</span> <span class="keyword">by</span>的断言,having的断言是针对聚合值的</div><div class="line">sqlite&gt; <span class="keyword">select</span> type_id, <span class="built_in">count</span>(*) <span class="keyword">from</span> foods <span class="built_in">group</span> <span class="keyword">by</span> type_id having <span class="built_in">count</span>(*) &lt; <span class="number">20</span>;</div><div class="line"></div><div class="line">去重复:</div><div class="line"><span class="built_in">distinct</span></div><div class="line">sqlite&gt; <span class="keyword">select</span> <span class="built_in">distinct</span> type_id <span class="keyword">from</span> foods</div><div class="line"></div><div class="line">多表连接join:</div><div class="line">连接是多表数据工作的关键,它是<span class="keyword">select</span>命令的第一个操作,连接操作的结果作为输入,供<span class="keyword">select</span>语句的其他部分(过滤)处理.</div><div class="line"></div><div class="line">sqlite&gt; <span class="keyword">select</span> foods.name food_types.name <span class="keyword">from</span> foods, food_types <span class="built_in">where</span> foods.type_id=food_types.id limit <span class="number">10</span></div><div class="line"></div><div class="line">备注:</div><div class="line">使用table_name.column_name的方式,区分哪个字段是那个表的</div><div class="line"></div><div class="line">内连接(求交集):</div><div class="line">sqlite&gt; <span class="keyword">select</span> * <span class="keyword">from</span> foods inner join food_types on foods.id == food_types.id;</div><div class="line"></div><div class="line">左外连接:</div><div class="line">sqlite&gt; <span class="keyword">select</span> * <span class="keyword">from</span> foods left outer join foods_episodes on foods.id= foods.episodes.food_id;</div><div class="line"></div><div class="line">举例:</div><div class="line">有张表是会员表(左表),有张表是状态表,左连接会员表查询所有会员的状态是吧</div><div class="line">如果会员状态不存在就Null,否则将右表的会员状态加到左表结果去</div><div class="line"></div><div class="line"></div><div class="line">名称和别名:</div><div class="line"><span class="keyword">select</span> foods.name, food_types.name <span class="keyword">from</span> foods, food_types <span class="built_in">where</span> foods.type_id = food_types.id limit <span class="number">10</span>;</div><div class="line"></div><div class="line">等于</div><div class="line"></div><div class="line"><span class="keyword">select</span> f.name, t.name <span class="keyword">from</span> foods f, food_types t <span class="built_in">where</span> f.type_id = t.id limit <span class="number">10</span></div><div class="line"></div><div class="line">=说明=</div><div class="line">foods表取别名f, food_types取别名t,方便某些表明比较长时重复输入长表名</div><div class="line"></div><div class="line">sqlite&gt; <span class="keyword">select</span> f.name as food, e1.name e1.session.e2.anme, e2.season </div><div class="line">        <span class="keyword">from</span> episodes e1, foods_episoeds f1, foods f, epsiondes e2, </div><div class="line">        foods_episodes fe2</div><div class="line">        <span class="built_in">where</span> </div><div class="line">        -- Get foods in season <span class="number">4</span></div><div class="line">        (e1.id = fe1.epsode_id <span class="built_in">and</span> e1.season = <span class="number">4</span>) <span class="built_in">and</span> fe1.food_id = f.id</div><div class="line">        -- link foods with <span class="built_in">all</span> other episodes</div><div class="line">        <span class="built_in">and</span> (fe1.food_id = fe2.food_id)</div><div class="line">        -- link with their respective episodes <span class="built_in">and</span> filter out e1's season</div><div class="line">        <span class="built_in">and</span> (fe2.episode_id = e2.id <span class="built_in">and</span> e2.season ! = e1.season)</div><div class="line">        oreder <span class="keyword">by</span> f.name</div><div class="line">        </div><div class="line"> food      name        season    name      season</div><div class="line"> Bool      The Shoes   <span class="number">4</span>         The abc   <span class="number">1</span></div><div class="line"> </div><div class="line"> =说明=</div><div class="line"> as关键词是可选的,但倾向保留,不容易混淆</div><div class="line"> </div><div class="line"> </div><div class="line">子查询:</div><div class="line">IN 操作符是一个双目操作,输入一个值和一列值,如果输入的单值存在与列值中,返回真,否则返回假</div><div class="line">sqlite&gt; <span class="keyword">select</span> <span class="number">1</span> in (<span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>)</div><div class="line"><span class="number">1</span></div><div class="line">sqlite&gt; <span class="keyword">select</span> <span class="number">2</span> in (<span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>)</div><div class="line"><span class="number">0</span></div><div class="line"></div><div class="line">sqlite&gt; <span class="keyword">select</span> <span class="built_in">count</span>(*) <span class="keyword">from</span> foods <span class="built_in">where</span> type_id in (<span class="number">1</span>, <span class="number">2</span>)</div><div class="line">可以写成这样</div><div class="line">sqlite&gt; <span class="keyword">select</span> <span class="built_in">count</span>(*) <span class="keyword">from</span> foods <span class="built_in">where</span> type_id in (<span class="keyword">select</span> id <span class="keyword">from</span> food_types <span class="built_in">where</span> name='Ba' <span class="built_in">or</span> name ='bc');</div><div class="line"> </div><div class="line">复合查询:</div><div class="line">* 涉及的关系字段数目必须相同</div><div class="line">* 只能有一个order <span class="keyword">by</span>子句,并且处于复合查询的最末尾, 对联合结果进行排序</div><div class="line">* </div><div class="line"><span class="built_in">union</span>:联合两个Select语句的结果,会消除重复,不消除采用<span class="built_in">union</span> <span class="built_in">all</span></div><div class="line">intersect:求交集</div><div class="line">expect:求在a不在b的结果</div><div class="line"> </div><div class="line"><span class="built_in">null</span></div><div class="line">使用is <span class="built_in">null</span> 或者 is <span class="built_in">not</span> <span class="built_in">null</span>来判断,不要使用== <span class="built_in">null</span>,将什么都查不到</div></pre></td></tr></table></figure>
+<p>###修改数据</p>
+<ol>
+<li>插入数据</li>
+</ol>
+<p>insert into table (column_list) values (value_list);;<br>变量table指明数据插入到哪个表中.变量column_list使用逗号分隔的字段名称,这些字段必须是表中存在的.变量value_list是用逗号分隔的值列表, 这些值与column_list的字段一一对应.<br>插入一行:<br>sqlite&gt; insert into foods (name, type_id) vlaues (‘cxxx’, 1);<br>sqlite&gt; insert into foods values(NULL, 1, ‘xxx)</p>
+<p>sqlite可以使用last_insert_rowid()获取最后插入的rowid</p>
+<ol>
+<li>更新记录</li>
+</ol>
+<p>update table set update_list where predicate;<br>update_list 是一个或多个”字段赋值”的列表,字段赋值的格式为column_name=value,<br>sqlite&gt; update foods set name=’Cxx’ where name = ‘xxx’;</p>
+<ol>
+<li>删除记录</li>
+</ol>
+<p>delete from table where predicate;</p>
+<p>delete from foods where name=’chonljl’;</p>
+<p>###完整性</p>
+<p>unique<br>primary key<br>not null<br>foreign key<br>check<br>collate<br>default</p>
+<p>示例:<br>id integer primary key autoincreament<br>name text not null collate nocase  //大小写不敏感<br>create table times(id int, date not null default current_date,<br>time not null default current_time,<br>timestamp not null default current_timestamp);</p>
+<p>current_date YYYY-MM-DD<br>current_time HH:MM:SS<br>current_timestamp YYYY-MM-DD HH:MM:SS</p>
+<p>create table contact (id integer primary key, unique(name, phone), check(length(phone)&gt;=7));</p>
+<p>所有字段的check约束都在修改发生前评估,要想 修改成功,所有约束的表达式必须判断为真.</p>
+<p>外键约束:<br>create table table_name<br>(column_definition references foreign_table(column_name)<br>on {delete|update} integerity_action<br>[not] deferrable[intially {deferred|immediate}.]<br>-);</p>
+<p>示例:</p>
+<figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> food_types (</div><div class="line">	<span class="keyword">id</span> <span class="built_in">integer</span> primary <span class="keyword">key</span>,</div><div class="line">	<span class="keyword">name</span> <span class="built_in">text</span></div><div class="line">);</div><div class="line"></div><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> foods (</div><div class="line">	<span class="keyword">id</span> <span class="built_in">integer</span> primary <span class="keyword">key</span>,</div><div class="line">	type_id <span class="built_in">integer</span>,</div><div class="line">	<span class="keyword">name</span> <span class="built_in">text</span></div><div class="line">);</div><div class="line"></div><div class="line"><span class="keyword">create</span> <span class="keyword">table</span> foods (</div><div class="line">	<span class="keyword">id</span> <span class="built_in">integer</span> primary <span class="keyword">key</span>,</div><div class="line">	type_id <span class="built_in">integer</span> <span class="keyword">references</span> food_types(<span class="keyword">id</span>)</div><div class="line">	<span class="keyword">on</span> <span class="keyword">delete</span> restrict</div><div class="line">	deferrable <span class="keyword">initially</span> deffered,</div><div class="line">	<span class="keyword">name</span> <span class="built_in">text</span></div><div class="line">);</div><div class="line"></div><div class="line"><span class="keyword">set</span> <span class="literal">null</span>, 如果父值被删除或者不存在了, 剩余的子值改为<span class="literal">null</span></div><div class="line"><span class="keyword">set</span> <span class="keyword">default</span>, 如果父值被删除或者不存在了,剩余的子值将修改为默认值</div><div class="line"><span class="keyword">cascade</span>:更新父值时,更新所以u匹配的子值,删除父值时,删除所有的子值</div><div class="line">restrict:更新或删除父值可能会出现孤立的子值,从而阻止事务</div><div class="line"><span class="keyword">no</span> <span class="keyword">action</span>:不干涉执行,只是观察</div><div class="line"></div><div class="line">deferrable控制定义的约束是立即强制实施还是延迟到整个事务结束</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;sqlite3的基本用法&lt;br&gt;
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="sqlite3" scheme="https://antwork.github.io/tags/sqlite3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>sqlite3的使用</title>
+    <link href="https://antwork.github.io/2015/04/28/2015-04-28-sqlite3-base/"/>
+    <id>https://antwork.github.io/2015/04/28/2015-04-28-sqlite3-base/</id>
+    <published>2015-04-28T08:31:12.000Z</published>
+    <updated>2017-01-21T08:09:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="sqlite3的使用"><a href="#sqlite3的使用" class="headerlink" title="sqlite3的使用"></a>sqlite3的使用</h3><p>创建数据库(调用该方法,如果数据库中不存在该数据并不会立即创建,直到数据库内部创建一些内容,如表或试图才会创建该数据库):    </p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ sqlite3 <span class="keyword">test</span>.<span class="keyword">db</span></div></pre></td></tr></table></figure>
+<p>创建表:    </p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sqlite&gt; create table test (<span class="built_in">id</span> <span class="built_in">integer</span> primary key, value <span class="built_in">text</span>);</div></pre></td></tr></table></figure>
+<p>插入数据(名为id的主键列,该列默认具备自动增长的属性,插入时不提供该列,sqlite会查找该列下一值后自动产生一个):    </p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">sqlite&gt; <span class="function">insert <span class="keyword">into</span> <span class="title">test</span>(<span class="params">id, <span class="keyword">value</span></span>) <span class="title">values</span>(<span class="params"><span class="number">1</span>, <span class="string">'eenie'</span></span>)</span>;</div><div class="line">sqlite&gt; <span class="function">insert <span class="keyword">into</span> <span class="title">test</span>(<span class="params">id, <span class="keyword">value</span></span>) <span class="title">values</span>(<span class="params"><span class="number">2</span>, <span class="string">'meenie'</span></span>)</span>;</div><div class="line">sqlite&gt; <span class="function">insert <span class="keyword">into</span> <span class="title">test</span>(<span class="params"><span class="keyword">value</span></span>) <span class="title">values</span>(<span class="params"><span class="string">'min'</span></span>)</span>;</div><div class="line">sqlite&gt; <span class="function">insert <span class="keyword">into</span> <span class="title">test</span>(<span class="params"><span class="keyword">value</span></span>) <span class="title">values</span>(<span class="params"><span class="string">'mo'</span></span>)</span>;</div></pre></td></tr></table></figure>
+<p>修改输出配置并查询:     </p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">sqlite&gt; .mode column</div><div class="line">sqlite&gt; .headers on</div><div class="line"><span class="section">sqlite&gt; select * from test;</span></div><div class="line">----------------------------------------------------------------------</div><div class="line">id          value</div><div class="line"><span class="bullet">----------  </span>----------</div><div class="line">1           value1</div><div class="line">2           value2</div><div class="line">3           value3</div><div class="line">4           value4</div></pre></td></tr></table></figure>
+<p>添加索引和视图    </p>
+<figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">sqlite&gt; <span class="keyword">create</span> <span class="keyword">index</span> test_idx <span class="keyword">on</span> test(value);</div><div class="line">sqlite&gt; <span class="keyword">create</span> view schema <span class="keyword">as</span> <span class="keyword">select</span> * <span class="keyword">from</span> sqlite_master;</div></pre></td></tr></table></figure>
+<p>退出:    </p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sqlite&gt; .<span class="keyword">exit</span></div></pre></td></tr></table></figure>
+<p>获取数据库的Schema信息</p>
+<p>获取所有的表和视图列表<br><figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">sqlite&gt; .tables</div><div class="line"></div><div class="line">-<span class="ruby">-------------</span></div><div class="line"></div><div class="line">schema test</div></pre></td></tr></table></figure></p>
+<p>获取创建的表和试图schema    </p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">sqlite&gt; .indices test</div><div class="line"></div><div class="line"><span class="comment">--------------------------------</span></div><div class="line"></div><div class="line">test_idx</div><div class="line"></div><div class="line">查看一个表的结或试图的定义语句(DDL)</div><div class="line">sqlite&gt; .schema test</div><div class="line">	</div><div class="line"><span class="comment">-------------------------------</span></div><div class="line"></div><div class="line">CREATE TABLE test (<span class="built_in">id</span> <span class="built_in">integer</span> primary key, value <span class="built_in">text</span>);</div><div class="line">CREATE INDEX test_idx <span class="keyword">on</span> test (value);</div><div class="line"></div><div class="line">不传table名称获取所有数据库队形(table, index, view, triger)的定义语句</div><div class="line">sqlite&gt; .schama</div><div class="line"></div><div class="line"><span class="comment">-------------------------------</span></div><div class="line"></div><div class="line">CREATE TABLE test (<span class="built_in">id</span> <span class="built_in">integer</span> primary key, value <span class="built_in">text</span>);</div><div class="line">CREATE VIEW schema <span class="keyword">as</span> select *<span class="keyword">from</span> sqlite_master;</div><div class="line">CREATE INDEX test_idx <span class="keyword">on</span> test (value);</div><div class="line">```		</div><div class="line"></div><div class="line"><span class="comment">####导出数据</span></div><div class="line">(将整个数据库导出为数据库定义语言(DDL)和书库操作语言(DML)命令,适合重新创建数据库对象和其中的数据库,默认输出到屏幕,使用.dump[filename]命令,将所有输出重定向到指定的文件中, 若要恢复输出到屏幕,只需要执行.out stdout):</div></pre></td></tr></table></figure>
+<p>sqlite&gt; .output file.sql<br>sqlite&gt; .dump<br>sqlite&gt; .output stdout</p>
+<hr>
+<p>file.sql内容:</p>
+<p>PRAGMA foreign_keys=OFF;<br>BEGIN TRANSACTION;<br>CREATE TABLE test (id integer primary key, value text);<br>INSERT INTO “test” VALUES(1,’value1’);<br>INSERT INTO “test” VALUES(2,’value2’);<br>INSERT INTO “test” VALUES(3,’value3’);<br>INSERT INTO “test” VALUES(4,’value4’);<br>CREATE INDEX test_idx on test (value);<br>CREATE VIEW schema as select *from sqlite_master;<br>COMMIT;</p>
+<figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="section">###导入数据</span></div><div class="line"><span class="bullet">1. </span>文件由sql语句构成, 可以使用.read命令导入(执行)文件中包含的命令</div><div class="line"><span class="bullet">2. </span>文件包括由逗号或者其他分隔符组成,可使用.import[<span class="string">file</span>][<span class="symbol">table</span>]命令</div><div class="line">查询当前默认的分隔符</div></pre></td></tr></table></figure>
+<pre><code>echo: off
+</code></pre><p>  explain: off<br>  headers: off<br>     mode: list<br>nullvalue: “”<br>   output: stdout<br>separator: “|”<br>    stats: off<br>    width:<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"></div></pre></td></tr></table></figure></p>
+<p>sqlite&gt; drop table test;<br>sqlite&gt; drop view schema;<br>sqlite&gt; .read file.sql<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">### 备份数据库</div></pre></td></tr></table></figure></p>
+<p>slqite3 test.db .dump &gt; test.sql</p>
+<p>sqlite3 test.db &lt; test.sql<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="section">### 注意</span></div><div class="line"></div><div class="line"><span class="bullet">1. </span>sqlite中默认的字符常量值是大小写敏感的,因此'Mike'与'mike'是不同的</div><div class="line"><span class="bullet">2. </span>sql不区分关键词和标识符的大小写,详见注意2示例</div><div class="line"><span class="bullet">3. </span>sqlite支持以单引号或双引号界定字符串,但是建议只使用单引号,对于已存在单引号,采用连续两个单引号,如 Kenny's chicken 要改成 'Kenny''s chicken'</div><div class="line"><span class="bullet">4. </span>单行注释采用两个连续连字符'--'</div><div class="line"><span class="bullet">5. </span>多行注释采用 /<span class="bullet">* *</span>/</div><div class="line"></div><div class="line">注意2示例:</div></pre></td></tr></table></figure></p>
+<p>下列语句具有相同效果<br>SELECT <em> from foo;<br>seleCt </em> frOm FOO;<br><figure class="highlight excel"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">?? <span class="number">1</span>. 数据库中的类型</div><div class="line"></div><div class="line">*.<span class="built_in">mode</span> <span class="built_in">column</span>效果展示<span class="symbol">:</span>* 用列分隔数据</div></pre></td></tr></table></figure></p>
+<p>0||Good News Bad News<br>1|1|Male Unbonding<br>2|1|The Stake Out<br>3|1|The Robbery<br>…</p>
+<p>sqlite&gt; .mode column<br>0                       Good News Bad News<br>1           1           Male Unbonding<br>2           1           The Stake Out<br>3           1           The Robbery</p>
+<figure class="highlight applescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">*.header <span class="keyword">on</span>* 带标题</div></pre></td></tr></table></figure>
+<p>0||Good News Bad News</p>
+<p>之后:</p>
+<p>id          season      name</p>
+<hr>
+<p>0                       Good News Bad News</p>
+<p>```</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;sqlite3的使用&quot;&gt;&lt;a href=&quot;#sqlite3的使用&quot; class=&quot;headerlink&quot; title=&quot;sqlite3的使用&quot;&gt;&lt;/a&gt;sqlite3的使用&lt;/h3&gt;&lt;p&gt;创建数据库(调用该方法,如果数据库中不存在该数据并不会立即创建,直到数据库内
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="sqlite3" scheme="https://antwork.github.io/tags/sqlite3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用网址备份</title>
+    <link href="https://antwork.github.io/2015/04/28/2015-04-28-mark-webs/"/>
+    <id>https://antwork.github.io/2015/04/28/2015-04-28-mark-webs/</id>
+    <published>2015-04-28T02:16:12.000Z</published>
+    <updated>2017-01-21T07:59:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="怎么在已添加的git版本管理的项目中更新ignore文件"><a href="#怎么在已添加的git版本管理的项目中更新ignore文件" class="headerlink" title="怎么在已添加的git版本管理的项目中更新ignore文件"></a>怎么在已添加的git版本管理的项目中更新ignore文件</h3><pre><code>Remove existing files from the repository:
+
+find . -name .DS_Store -print0 | xargs -0 git rm -f --ignore-unmatch
+Add the line
+
+.DS_Store
+to the file .gitignore, which can be found at the top level of your repository (or created if it isn&apos;t there already). Then
+
+git add .gitignore
+git commit -m &apos;.DS_Store banished!&apos;
+</code></pre><p>原网址:<br><a href="http://stackoverflow.com/questions/107701/how-can-i-remove-ds-store-files-from-a-git-repository" target="_blank" rel="external">http://stackoverflow.com/questions/107701/how-can-i-remove-ds-store-files-from-a-git-repository</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;怎么在已添加的git版本管理的项目中更新ignore文件&quot;&gt;&lt;a href=&quot;#怎么在已添加的git版本管理的项目中更新ignore文件&quot; class=&quot;headerlink&quot; title=&quot;怎么在已添加的git版本管理的项目中更新ignore文件&quot;&gt;&lt;/a&gt;怎么
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="ios" scheme="https://antwork.github.io/tags/ios/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flask和SQLAlchemy</title>
+    <link href="https://antwork.github.io/2015/04/18/2015-04-18-flask-base/"/>
+    <id>https://antwork.github.io/2015/04/18/2015-04-18-flask-base/</id>
+    <published>2015-04-17T23:44:12.000Z</published>
+    <updated>2017-01-21T07:59:34.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Flask和SQLAlchemy"><a href="#Flask和SQLAlchemy" class="headerlink" title="Flask和SQLAlchemy"></a>Flask和SQLAlchemy</h3><h4 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h4><p>怎么使用virtualenv</p>
+<ol>
+<li><p>安装virtualenv<br>$ sudo easy_install virtualenv<br>或者 $ sudo pip install virtualenv</p>
+</li>
+<li><p>添加virtualenv到文件夹<br>$ virtualenv venv</p>
+</li>
+<li><p>激活virtual环境<br>$ . venv/bin/activate</p>
+</li>
+<li><p>安装python</p>
+</li>
+<li><p>安装flask到虚拟环境,如果全局使用 $ sudo pip install Flask<br>$  pip install Flask</p>
+</li>
+<li><p>安装 SQLAlchemy<br>$ pip install flask-sqlalchemy<br>学习网站: <a href="http://pythonhosted.org/Flask-SQLAlchemy/quickstart.html" target="_blank" rel="external">http://pythonhosted.org/Flask-SQLAlchemy/quickstart.html</a></p>
+</li>
+<li><p>操作数据库前需要先创建</p>
+</li>
+<li><h2 id="安装依赖"><a href="#安装依赖" class="headerlink" title="安装依赖"></a>安装依赖</h2><p> 将当前的依赖包放入requrements.txt中<br> (venv) $ pip freeze &gt;requirements.txt</p>
+<hr>
+<p> 安装依赖包<br> (venv) $ pip install -r requirements.txt</p>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Flask和SQLAlchemy&quot;&gt;&lt;a href=&quot;#Flask和SQLAlchemy&quot; class=&quot;headerlink&quot; title=&quot;Flask和SQLAlchemy&quot;&gt;&lt;/a&gt;Flask和SQLAlchemy&lt;/h3&gt;&lt;h4 id=&quot;安装&quot;&gt;&lt;a hr
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="flask, 怎么使用virtualenv" scheme="https://antwork.github.io/tags/flask-%E6%80%8E%E4%B9%88%E4%BD%BF%E7%94%A8virtualenv/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python pip, flask使用备忘</title>
+    <link href="https://antwork.github.io/2015/03/31/2015-03-31-pip/"/>
+    <id>https://antwork.github.io/2015/03/31/2015-03-31-pip/</id>
+    <published>2015-03-31T03:17:12.000Z</published>
+    <updated>2017-01-21T08:09:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="pip使用"><a href="#pip使用" class="headerlink" title="pip使用"></a>pip使用</h3><p>官网文档:<a href="https://pip.pypa.io/en/latest/user_guide.html" target="_blank" rel="external">https://pip.pypa.io/en/latest/user_guide.html</a></p>
+<figure class="highlight haml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">* 安装pip(需要使用sudo授权)</div><div class="line"></div><div class="line">-<span class="ruby"> 安装pip</span></div><div class="line">	$ sudo easy_install pip </div><div class="line">-<span class="ruby"> 更新pip</span></div><div class="line">	$ pip install -U pip</div><div class="line"></div><div class="line"></div><div class="line">* 使用pip</div><div class="line">-<span class="ruby"> 安装插件		</span></div><div class="line">	(venv) $ pip install flask           	# lastest version</div><div class="line">	(venv) $ pip install flask--0.10.0 		# specify version</div><div class="line">	(venv) $ pip install 'flask&gt;=0.10.0'    # minimun version</div><div class="line">-<span class="ruby"> 更新插件		</span></div><div class="line">	(venv) $ pip install --upgrade flask	</div><div class="line">-<span class="ruby"> 卸载插件		</span></div><div class="line">	(venv) $ pip uninstall flask</div><div class="line">-<span class="ruby"> Requirements files</span></div><div class="line">	(venv) $ pip install -r requirements.txt </div><div class="line">-<span class="ruby"> Requirements格式</span></div><div class="line">	https://pip.pypa.io/en/latest/reference/pip_install.html#requirements-file-format</div><div class="line">-<span class="ruby"> 列表</span></div><div class="line">	(venv) $ pip list		# 列出所有已安装包</div><div class="line">	(venv) $ pip list --outdated # 列出过期包</div><div class="line">-<span class="ruby"> 详情</span></div><div class="line">	(venv) $ pip show flask</div><div class="line">-<span class="ruby"> 查询</span></div><div class="line">	(venv) $ pip search "flask"</div><div class="line">-<span class="ruby"> freeze</span></div><div class="line">	Output installed packages in requirements format.</div><div class="line">	packages are listed in a case-insensitive sorted order.</div><div class="line"></div><div class="line">* 安装 virtualenv</div><div class="line">-<span class="ruby"> 安装</span></div><div class="line">	$ sudo easy_install virtualenv</div><div class="line">-<span class="ruby"> 在文件夹中加入virtualenv</span></div><div class="line">	$ virtualenv venv</div><div class="line">-<span class="ruby"> 开启</span></div><div class="line">	$ . venv/bin/activate</div><div class="line">-<span class="ruby"> 查看版本</span></div><div class="line">	$ virtualenv --version</div><div class="line"></div><div class="line">* requirements示例:</div></pre></td></tr></table></figure>]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;pip使用&quot;&gt;&lt;a href=&quot;#pip使用&quot; class=&quot;headerlink&quot; title=&quot;pip使用&quot;&gt;&lt;/a&gt;pip使用&lt;/h3&gt;&lt;p&gt;官网文档:&lt;a href=&quot;https://pip.pypa.io/en/latest/user_guide.htm
+    
+    </summary>
+    
+      <category term="备忘" scheme="https://antwork.github.io/categories/%E5%A4%87%E5%BF%98/"/>
+    
+    
+      <category term="python, pip, flask" scheme="https://antwork.github.io/tags/python-pip-flask/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>CSS样式基础学习笔记</title>
+    <link href="https://antwork.github.io/2015/03/27/2015-03-27-css-base/"/>
+    <id>https://antwork.github.io/2015/03/27/2015-03-27-css-base/</id>
+    <published>2015-03-26T23:44:12.000Z</published>
+    <updated>2017-01-21T07:59:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="CSS基础学习"><a href="#CSS基础学习" class="headerlink" title="CSS基础学习"></a>CSS基础学习</h3><p>问题:</p>
+<ol>
+<li>css的作用</li>
+<li>css的原理</li>
+<li>css的使用,针对每个部件配置</li>
+<li>布局</li>
+<li>字体,大小</li>
+<li>颜色</li>
+</ol>
+<p>语法:<br><figure class="highlight plain"><figcaption><span>&#123;declaration1; declaration2;...;declarationN&#125; </span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">示例:</div><div class="line"> h1 &#123;color:red;font-size:14px&#125;</div></pre></td></tr></table></figure></p>
+<p>6.颜色:            </p>
+<p>颜色有三种方法,名称,十六进制,RGB<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>:red&#125;</div><div class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>:<span class="number">#ff0000</span>;&#125;</div><div class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>:<span class="number">#f00</span>;&#125;</div><div class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>:rgb&#123;<span class="number">255</span>,<span class="number">0</span>,<span class="number">0</span>&#125;&#125;</div><div class="line"><span class="selector-tag">p</span> &#123;<span class="attribute">color</span>:rgb&#123;<span class="number">100%</span>,<span class="number">0%</span>,<span class="number">0%</span>&#125;&#125;</div></pre></td></tr></table></figure></p>
+<p>p {font-family:”sans serif”; font-size:14px} # 值为若干单词,则需要加引号</p>
+<ol>
+<li>分组:    </li>
+</ol>
+<p>h1, h2, h3, h4, h5, h6 {<br>    color:green;<br>}</p>
+<ol>
+<li><p>继承及其问题:<br>如果定义了body,则body中的的元素都采用该样式,如果想某个子特殊,则单独定义就可以了</p>
+</li>
+<li><p>派生选择器:<br>l1 strong {<br> font-style:italic;<br> font-weight:normal;<br>}</p>
+</li><li><strong>我是斜体字,因为Strong再li中</strong></li>
+
+<li><p>id选择器,以”#”来定义:    </p>
+</li>
+</ol>
+<figure class="highlight coq"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">#<span class="built_in">red</span> &#123;<span class="built_in">red</span>:<span class="built_in">red</span>;&#125;</div><div class="line">&lt;p id=<span class="string">"red"</span>&gt;红色段落&lt;/p&gt;</div></pre></td></tr></table></figure>
+<ol>
+<li><p>id选择器和派生选择器,以#开始</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#sidebar</span> <span class="selector-tag">p</span> &#123;</div><div class="line">	<span class="attribute">font-style</span>:italic;</div><div class="line">	<span class="attribute">text-align</span>:right;</div><div class="line">	<span class="attribute">margin-top</span>: <span class="number">0.5em</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p>css类选择器,以.开始        </p>
+</li>
+</ol>
+<figure class="highlight stylus"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.center</span> &#123;<span class="attribute">text-align</span>:center&#125; </div><div class="line">所有center类的html元素均居中</div><div class="line">&lt;<span class="selector-tag">h1</span> class=<span class="string">"center"</span>&gt;</div><div class="line">居中的内容</div><div class="line">&lt;/h1&gt;</div><div class="line">&lt;<span class="selector-tag">p</span> class=<span class="string">"center"</span>&gt;</div><div class="line">居中的段落</div><div class="line">&lt;/p&gt;</div><div class="line"></div><div class="line">class派生选择器		</div><div class="line"></div><div class="line"><span class="selector-class">.fancy</span> <span class="selector-tag">td</span> &#123;</div><div class="line">	<span class="attribute">color</span>: <span class="number">#f60</span>;</div><div class="line">	<span class="attribute">background</span>:<span class="number">#666</span>;</div><div class="line">&#125;</div><div class="line">示例:</div><div class="line">&lt;<span class="selector-tag">div</span> class=<span class="string">"fancy"</span>&gt;</div><div class="line">	..</div><div class="line">	&lt;td&gt;内容&lt;/td&gt;</div><div class="line">	..</div><div class="line">&lt;/div&gt;</div><div class="line"></div><div class="line"><span class="selector-tag">td</span><span class="selector-class">.fancy</span> &#123;</div><div class="line">	<span class="attribute">color</span>:<span class="number">#f60</span>;</div><div class="line">	<span class="attribute">background</span>:<span class="number">#666</span>;</div><div class="line">&#125;</div><div class="line">示例:&lt;<span class="selector-tag">td</span> class=<span class="string">"fancy"</span>&gt;</div></pre></td></tr></table></figure>
+<ol>
+<li>css属性选择器,对带有制定属性的html的元素设置样式.用[]包括<br>只有在规定了 !DOCTYPE 时，IE7 和 IE8 才支持属性选择器。在 IE6 及更低的版本中，不支持属性选择</li>
+</ol>
+<figure class="highlight maxima"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div></pre></td><td class="code"><pre><div class="line">示例:		</div><div class="line"></div><div class="line">[<span class="built_in">title</span>]</div><div class="line">&#123;</div><div class="line">	<span class="built_in">color</span>:red;</div><div class="line">&#125;</div><div class="line"></div><div class="line">&lt;h2 <span class="built_in">title</span>=<span class="string">"Hello world"</span>&gt;&lt;/h2&gt;</div><div class="line"></div><div class="line">属性值选择器</div><div class="line">[<span class="built_in">title</span>=W3School]</div><div class="line">&#123;</div><div class="line"><span class="built_in">border</span>:5px solid blue;</div><div class="line">&#125;</div><div class="line">&lt;img <span class="built_in">title</span>=<span class="string">"W3School"</span> src=<span class="string">"/i/w3school_logo_white.gif"</span> /&gt;	</div><div class="line"></div><div class="line">属性和值多个值</div><div class="line">下面的例子为包含指定值的<span class="built_in">title</span>属性的所有元素设置样式。适用于由空格分隔的属性值：</div><div class="line">[<span class="built_in">title</span>~=hello]&#123;<span class="built_in">color</span>:red;&#125;</div><div class="line">下面的例子为带有包含指定值的 lang属性的所有元素设置样式。适用于由连字符分隔的属性值：</div><div class="line">[lang|=en]&#123;<span class="built_in">color</span>:red;&#125;</div><div class="line"></div><div class="line"></div><div class="line">设置表单的样式</div><div class="line">属性选择器在为不带有 class 或 id 的表单设置样式时特别有用：</div><div class="line">input[type=<span class="string">"text"</span>]</div><div class="line">&#123;</div><div class="line">  <span class="built_in">width</span>:150px;</div><div class="line">  <span class="built_in">display</span>:<span class="built_in">block</span>;</div><div class="line">  margin-bottom:10px;</div><div class="line">  <span class="built_in">background</span>-<span class="built_in">color</span>:yellow;</div><div class="line">  <span class="built_in">font</span>-family: Verdana, Arial;</div><div class="line">&#125;</div><div class="line"></div><div class="line">input[type=<span class="string">"button"</span>]</div><div class="line">&#123;</div><div class="line">  <span class="built_in">width</span>:120px;</div><div class="line">  margin-left:35px;</div><div class="line">  <span class="built_in">display</span>:<span class="built_in">block</span>;</div><div class="line">  <span class="built_in">font</span>-family: Verdana, Arial;</div><div class="line">&#125;</div><div class="line"></div><div class="line">CSS 选择器参考手册</div><div class="line">选择器	描述</div><div class="line">[attribute]	用于选取带有指定属性的元素。</div><div class="line">[attribute=value]	用于选取带有指定属性和值的元素。</div><div class="line">[attribute~=value]	用于选取属性值中包含指定词汇的元素。</div><div class="line">[attribute|=value]	用于选取带有以指定值开头的属性值的元素，该值必须是整个单词。</div><div class="line">[attribute^=value]	匹配属性值以指定值开头的每个元素。</div><div class="line">[attribute$=value]	匹配属性值以指定值结尾的每个元素。</div><div class="line">[attribute*=value]	匹配属性值中包含指定值的每个元素。</div></pre></td></tr></table></figure>
+<p>外部样式表:</p>
+<head><br><link rel="stylesheet" type="text/css" href="mystyle.css"><br></head>
+
+<p>样式表mystyle.css<br>hr {color: sienna;}<br>p {margin-left:20px}<br>body {background-image:url(‘images/back40.gif’)}</p>
+<p>不要在属性值与单位之间留有空格。假如你使用 “margin-left: 20 px” 而不是 “margin-left: 20px” ，它仅在 IE 6 中有效，但是在 Mozilla/Firefox 或 Netscape 中却无法正常工作。</p>
+<p>内部样式表<br>当单个文档需要特殊的样式时，就应该使用内部样式表。你可以使用 <style> 标签在文档头部定义内部样式表，就像这样:</p>
+<head><br><style type="text/css"><br>  hr {color: sienna;}<br>  p {margin-left: 20px;}<br>  body {background-image: url(“images/back40.gif”);}<br></style><br>
+
+</p><p>内联样式<br>由于要将表现和内容混杂在一起，内联样式会损失掉样式表的许多优势。请慎用这种方法，例如当样式仅需要在一个元素上应用一次时。<br>要使用内联样式，你需要在相关的标签内使用样式（style）属性。Style 属性可以包含任何 CSS 属性。本例展示如何改变段落的颜色和左外边距：</p>
+<p style="color: sienna; margin-left: 20px"><br>This is a paragraph<br></p>
+
+
+<p>###标签:</p>
+<h2 id="文字相关"><a href="#文字相关" class="headerlink" title="文字相关:"></a>文字相关:</h2><p>color:black<br>font-family:arial<br>font-size<br>text-align:center, right<br>font-weight:normal<br>font-style:italic</p>
+<h2 id="布局相关"><a href="#布局相关" class="headerlink" title="布局相关:"></a>布局相关:</h2><p>background:#fff<br>margin: 0;<br>padding: 0;<br>margin-top: 0.5em;<br>padding:10px; </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;CSS基础学习&quot;&gt;&lt;a href=&quot;#CSS基础学习&quot; class=&quot;headerlink&quot; title=&quot;CSS基础学习&quot;&gt;&lt;/a&gt;CSS基础学习&lt;/h3&gt;&lt;p&gt;问题:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;css的作用&lt;/li&gt;
+&lt;li&gt;css的原理&lt;/li&gt;
+&lt;li&gt;c
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="html, css" scheme="https://antwork.github.io/tags/html-css/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Flask database使用</title>
+    <link href="https://antwork.github.io/2015/03/24/2015-03-24-python-database/"/>
+    <id>https://antwork.github.io/2015/03/24/2015-03-24-python-database/</id>
+    <published>2015-03-24T02:06:12.000Z</published>
+    <updated>2017-01-21T07:59:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Flask-SQLAlchemy的使用"><a href="#Flask-SQLAlchemy的使用" class="headerlink" title="Flask-SQLAlchemy的使用"></a>Flask-SQLAlchemy的使用</h3><ol>
+<li><p>初始化    </p>
+<ul>
+<li><p>安装sqlalchemy         </p>
+<figure class="highlight plain"><figcaption><span>$ pip install flask-sqlalchemy```		</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">* 初始化:		</div><div class="line"></div><div class="line">```		</div><div class="line"># 导入包</div><div class="line">from flask.ext.sqlalchemy import SQLAlcheymy</div><div class="line">basedir = os.path.abspath(os.path.dirname(__file__))</div><div class="line"></div><div class="line">app = Flask(__name__)</div><div class="line"></div><div class="line"># 配置数据库路径</div><div class="line">app.config[&apos;SQLALCHEMY_DATABASE_URI&apos;] =\</div><div class="line">	&apos;sqlite:///&apos;+os.path.join(basedir,&apos;data.sqlite&apos;)</div><div class="line">app.config([&apos;SQLALCHEMY_COMMIT_ON_TEARDOWN&apos;]) = True</div><div class="line"></div><div class="line"># 初始</div><div class="line">db = SQLAlchemy(app)</div></pre></td></tr></table></figure>
+</li>
+</ul>
+</li>
+<li><p>模型管理    </p>
+</li>
+</ol>
+<ul>
+<li>建立模型        </li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Role</span><span class="params">(db.Model)</span>:</span></div><div class="line">	__tablename__ = <span class="string">'roles'</span>  <span class="comment"># 自定义表名</span></div><div class="line">	id = db.Column(db.Integer, primary_key=<span class="keyword">True</span>)  <span class="comment"># primary_key 主键</span></div><div class="line">	name = db.Column(db.String(<span class="number">64</span>), unique=<span class="keyword">True</span>)  <span class="comment"># unique 唯一</span></div><div class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span></div><div class="line">		<span class="keyword">return</span> <span class="string">'&lt;Role %r&gt;'</span> % self.name</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span><span class="params">(db.Model)</span>:</span>= <span class="string">'users'</span></div><div class="line">	id = db.Column(db.Integer, primary_key=<span class="keyword">True</span>)</div><div class="line">	username = db.Column(db.String(<span class="number">64</span>), unique=<span class="keyword">True</span>, index=<span class="keyword">True</span>) <span class="comment"># index索引,有助于数据查询</span></div><div class="line">	<span class="function"><span class="keyword">def</span> <span class="title">__repr__</span><span class="params">(self)</span>:</span></div><div class="line">		<span class="keyword">return</span> <span class="string">'&lt;User % __tablename__ r&gt;'</span> % self.username</div><div class="line">```		</div><div class="line">		</div><div class="line">* 关系示例		</div><div class="line"></div><div class="line">one-to-many示例:</div><div class="line">```		</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Role</span><span class="params">(db.Model)</span>:</span></div><div class="line">	<span class="comment"># ...</span></div><div class="line">	users = db.relationship(<span class="string">'User'</span>, backref=<span class="string">'role'</span>)</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span><span class="params">(db.Model)</span>:</span>= <span class="string">'users'</span></div><div class="line">	<span class="comment"># ..</span></div><div class="line">	role_id = db.Column(db.Integer, db.ForeignKey(<span class="string">'roles.id'</span>))</div><div class="line">```	</div><div class="line"></div><div class="line">one-to-one示例:		</div><div class="line"></div><div class="line">```		</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Role</span><span class="params">(db.Model)</span>:</span></div><div class="line">	<span class="comment"># ...</span></div><div class="line">	user = db.relationship(<span class="string">'User'</span>, backref=<span class="string">'role'</span>, uselist=Flase) <span class="comment"># 添加uselist为False</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">User</span><span class="params">(db.Model)</span>:</span>= <span class="string">'users'</span></div><div class="line">	<span class="comment"># ..</span></div><div class="line">	role_id = db.Column(db.Integer, db.ForeignKey(<span class="string">'roles.id'</span>))</div><div class="line">```	</div><div class="line"></div><div class="line">many-to-many示例:		</div><div class="line"></div><div class="line">```		</div><div class="line"><span class="comment"># 关系定义需要先于model		</span></div><div class="line">registrations = db.Table(<span class="string">'registrations'</span>,</div><div class="line">	db.Column(<span class="string">'student_id'</span>, db.Integer, db.ForeignKey(<span class="string">'students.id'</span>)),</div><div class="line">	db.Column(<span class="string">'class_id'</span>,db.Integer, db.ForeignKey(<span class="string">'classes.id'</span>)))</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span><span class="params">(db.Model)</span>:</span></div><div class="line">	id = db.Column(db.Integer, primary_key=<span class="keyword">True</span>)</div><div class="line">	name = db.Column(db.String)</div><div class="line">	classes = db.relationship(<span class="string">'Class'</span>,</div><div class="line">								secondary=registrations,</div><div class="line">								backref=db.backref(<span class="string">'students'</span>,lazy=<span class="string">'dynamic'</span>),</div><div class="line">								lazy=<span class="string">'dynamic'</span>)</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Class</span><span class="params">(db.Model)</span>:</span></div><div class="line">	id = db.Column(db.Integer, primary_key=<span class="keyword">True</span>)</div><div class="line">	name = db.Column(db.String)</div></pre></td></tr></table></figure>
+<p>self many-to-many示例:        </p>
+<pre><code>class Follow(db.Model):
+    __tablename__ = &apos;follows&apos;
+    follower_id = db.Column(db.Integer, db.ForeignKey(&apos;users.id&apos;),
+                            primary_key=True)
+    followed_id = db.Column(db.Integer, db.ForeignKey(&apos;users.id&apos;),
+                            primary_key=True)
+    timestamp = db.Column(db.DateTime, default=datetime.utcnow)
+
+class User(UserMixin, db.Model): 
+    # ...
+    followed = db.relationship(&apos;Follow&apos;,
+                               foreign_keys=[Follow.follower_id],
+                               backref=db.backref(&apos;follower&apos;, lazy=&apos;joined&apos;),
+                               lazy=&apos;dynamic&apos;,
+                               cascade=&apos;all, delete-orphan&apos;)
+    followers = db.relationship(&apos;Follow&apos;,
+                                foreign_keys=[Follow.followed_id],
+                                backref=db.backref(&apos;followed&apos;, lazy=&apos;joined&apos;),
+                                lazy=&apos;dynamic&apos;,
+                                cascade=&apos;all, delete-orphan&apos;)
+</code></pre><p>UserMixin是什么鬼</p>
+<p><a href="/assets/flask_sqlalchemy1.png"><img src="/assets/flask_sqlalchemy1.png" alt=""></a><br><a href="/assets/flask_sqlalchemy2.png"><img src="/assets/flask_sqlalchemy2.png" alt=""></a><br><a href="/assets/flask_sqlalchemy3.png"><img src="/assets/flask_sqlalchemy3.png" alt=""></a><br><a href="/assets/flask_sqlalchemy4.png"><img src="/assets/flask_sqlalchemy4.png" alt=""></a>    </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Flask-SQLAlchemy的使用&quot;&gt;&lt;a href=&quot;#Flask-SQLAlchemy的使用&quot; class=&quot;headerlink&quot; title=&quot;Flask-SQLAlchemy的使用&quot;&gt;&lt;/a&gt;Flask-SQLAlchemy的使用&lt;/h3&gt;&lt;ol&gt;
+
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="python, flask, sqlalchemy, database" scheme="https://antwork.github.io/tags/python-flask-sqlalchemy-database/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python Flask使用备忘</title>
+    <link href="https://antwork.github.io/2015/03/20/2015-03-20-python-flask/"/>
+    <id>https://antwork.github.io/2015/03/20/2015-03-20-python-flask/</id>
+    <published>2015-03-20T08:06:12.000Z</published>
+    <updated>2017-01-21T07:59:31.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>备忘:        </p>
+<ol>
+<li>处理请求参数:通过request.args.get可以获取get的参数和将参数放入header的post请求,如果需要处理将form-data的数据,需要使用request.form[‘key’]获取</li>
+</ol>
+<p>示例:<br><figure class="highlight oxygene"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">method</span> = <span class="title">request</span>.<span class="title">method</span></span></div><div class="line"><span class="title">if</span> <span class="title">method</span> == '<span class="title">POST</span>':</div><div class="line">	username = request.form[<span class="string">'username'</span>]</div><div class="line">	password = request.form[<span class="string">'password'</span>]</div><div class="line">elif <span class="function"><span class="keyword">method</span> == '<span class="title">GET</span>':</span></div><div class="line">	username = request.args.get(<span class="string">'username'</span>)</div><div class="line">	password = request.args.get(<span class="string">'password'</span>)</div></pre></td></tr></table></figure></p>
+<ol>
+<li><p>one-to-many的模型数据查询中,对于多的那一方查询,比如 person.posts,得到的时一个sql查询,需要使用person.posts.all()才能获取到数据        </p>
+</li>
+<li><p>处理 @app.route(‘/xxx’), 如果是post请求记得,要添加methods=[‘POST’]    </p>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;备忘:        &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;处理请求参数:通过request.args.get可以获取get的参数和将参数放入header的post请求,如果需要处理将form-data的数据,需要使用request.form[‘key’]获取&lt;/li&gt;
+&lt;/ol&gt;
+
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="python, flask, alchemy" scheme="https://antwork.github.io/tags/python-flask-alchemy/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS in-house发布</title>
+    <link href="https://antwork.github.io/2015/03/19/2015-03-19-in-house-distribution/"/>
+    <id>https://antwork.github.io/2015/03/19/2015-03-19-in-house-distribution/</id>
+    <published>2015-03-19T08:06:12.000Z</published>
+    <updated>2017-01-21T07:59:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>几个备忘:        </p>
+<ol>
+<li>plist的链接必须是https开头的,貌似第三方存储平台没啥用,还是考虑怎么在服务器端搞定吧</li>
+<li>新版不会自动生成plist,所以需要手动的去弄</li>
+<li><a href="https://xx./xx.plist这里对于长度没要求,不一定必须放入根目录中,(不知道谁好像说过,反正这个是没要求的" target="_blank" rel="external">https://xx./xx.plist这里对于长度没要求,不一定必须放入根目录中,(不知道谁好像说过,反正这个是没要求的</a>)</li>
+<li>生成证书的参考这里 <a href="http://blog.csdn.net/abbottsuccess/article/details/4445160" target="_blank" rel="external">http://blog.csdn.net/abbottsuccess/article/details/4445160</a>, 需要在keychain的偏好设置–证书–OCSP关闭, CRL关闭再请求</li>
+<li>ssl申请网站 <a href="https://www.wosign.com" target="_blank" rel="external">沃通</a></li>
+</ol>
+<p>参考网址:<br><a href="http://blog.csdn.net/pang040328/article/details/40924737" target="_blank" rel="external">http://blog.csdn.net/pang040328/article/details/40924737</a>        </p>
+<p><a href="/assets/AppName.plist">空白模板</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;几个备忘:        &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;plist的链接必须是https开头的,貌似第三方存储平台没啥用,还是考虑怎么在服务器端搞定吧&lt;/li&gt;
+&lt;li&gt;新版不会自动生成plist,所以需要手动的去弄&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;https://xx.
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="ios, ad-hoc, 企业发布 ,发布, In house," scheme="https://antwork.github.io/tags/ios-ad-hoc-%E4%BC%81%E4%B8%9A%E5%8F%91%E5%B8%83-%E5%8F%91%E5%B8%83-In-house/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>iOS 应用的图标和启动图尺寸</title>
+    <link href="https://antwork.github.io/2015/03/11/2015-03-11-ios-default-icon/"/>
+    <id>https://antwork.github.io/2015/03/11/2015-03-11-ios-default-icon/</id>
+    <published>2015-03-11T08:06:12.000Z</published>
+    <updated>2017-01-21T07:59:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>官网数据:<br><a href="https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1" target="_blank" rel="external">https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1</a></p>
+<p>#Icon</p>
+<ul>
+<li>iPhone icon size    </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>尺寸</th>
+<th>图片名称</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>57 x 57</td>
+<td>Icon.png</td>
+<td>iOS 5, 6</td>
+</tr>
+<tr>
+<td>114 x 114</td>
+<td>Icon@2x.png</td>
+<td>iOS 5, 6</td>
+</tr>
+<tr>
+<td>120 x 120</td>
+<td>Icon-60@2x.png</td>
+<td>iOS 7, 8</td>
+</tr>
+<tr>
+<td>29 x 29</td>
+<td>Icon-Small.png</td>
+<td>Spotlight -iOS5,6 Settings-iOS 5-8</td>
+</tr>
+<tr>
+<td>58 x 58</td>
+<td>Icon-Small@2x.png</td>
+<td>Spotlight -iOS5,6 Settings-iOS 5-6</td>
+</tr>
+<tr>
+<td>80 x 80</td>
+<td>Icon-Small-40@2x.png</td>
+<td>Spotlight -iOS57,8</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>iPad    </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>尺寸</th>
+<th>图片名称</th>
+<th>备注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>72 x 72</td>
+<td>Icon-72.png</td>
+<td>iOS 5, 6</td>
+</tr>
+<tr>
+<td>144 x 144</td>
+<td>Icon-72@2x.png</td>
+<td>iOS 5, 6</td>
+</tr>
+<tr>
+<td>180 x 180</td>
+<td>Icon-60@3x.png</td>
+<td>iOS 7, 8</td>
+</tr>
+<tr>
+<td>29 x 29</td>
+<td>Icon-Small.png</td>
+<td>Settings -iOS5,8</td>
+</tr>
+<tr>
+<td>58 x 58</td>
+<td>Icon-Small@2x.png</td>
+<td>Settings -iOS5,8</td>
+</tr>
+<tr>
+<td>50 x 50</td>
+<td>Icon-Small-50.png</td>
+<td>Spotlight -iOS5,6</td>
+</tr>
+<tr>
+<td>100 x 100</td>
+<td>Icon-Small-50@2x.png</td>
+<td>Spotlight -iOS5,6</td>
+</tr>
+<tr>
+<td>80 x 80</td>
+<td>Icon-Small-40@2x.png</td>
+<td>Spotlight -iOS7,8</td>
+</tr>
+</tbody>
+</table>
+<p>###启动图</p>
+<table>
+<thead>
+<tr>
+<th>设备</th>
+<th>尺寸</th>
+<th>图片名称</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>iphone 3</td>
+<td>320 x 480</td>
+<td>Default.png</td>
+</tr>
+<tr>
+<td>iphone 4</td>
+<td>640 x 960</td>
+<td>Default@2x.png</td>
+</tr>
+<tr>
+<td>iphone 5</td>
+<td>640 x 1136</td>
+<td>Default-568h@2x.png</td>
+</tr>
+<tr>
+<td>iphone 6</td>
+<td>750 x 1334</td>
+<td>Default-667h@2x.png</td>
+</tr>
+<tr>
+<td>iphone 6p</td>
+<td>1242 x 2208</td>
+<td>Default-736h@3x.png</td>
+</tr>
+</tbody>
+</table>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;官网数据:&lt;br&gt;&lt;a href=&quot;https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="ios, Icon, 启动图, Default" scheme="https://antwork.github.io/tags/ios-Icon-%E5%90%AF%E5%8A%A8%E5%9B%BE-Default/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>python study 0</title>
+    <link href="https://antwork.github.io/2015/02/27/2015-02-27-python-study-0/"/>
+    <id>https://antwork.github.io/2015/02/27/2015-02-27-python-study-0/</id>
+    <published>2015-02-27T01:52:12.000Z</published>
+    <updated>2017-01-21T08:03:36.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="input-amp-output"><a href="#input-amp-output" class="headerlink" title="input &amp; output"></a>input &amp; output</h3><ol>
+<li>输出  <code>print &#39;Hello, world&#39;</code></li>
+<li>输入  <code>name = raw_input()</code></li>
+<li>注释: <code># 这是注释</code></li>
+<li>Bool: <code>True , False, and, or, not</code></li>
+<li>空值:  <code>None</code></li>
+<li>常量:  全部大写</li>
+<li>unicode <code>print u&#39;中文8. &#39;</code></li>
+<li>格式化: <code>%d 整数, %f浮点数, %s字符串 %x 十六进制</code></li>
+<li>list-初始 <code>classmates = [&#39;A&#39;, &#39;B&#39;]</code></li>
+<li>list-计算长度 <code>len(classmates)</code></li>
+<li>list-索引 <code>classmates[0]</code></li>
+<li>list-添加,删除 <code>classmates.append(&#39;C&#39;)   classmates.insert(1, &#39;Jack&#39;) classmates.pop()</code></li>
+<li>tuple 一旦初始就不能修改, 如 classmates = (‘A’, ‘B’, ‘C’)</li>
+</ol>
+<p>疑问,python中添加中文注释</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;input-amp-output&quot;&gt;&lt;a href=&quot;#input-amp-output&quot; class=&quot;headerlink&quot; title=&quot;input &amp;amp; output&quot;&gt;&lt;/a&gt;input &amp;amp; output&lt;/h3&gt;&lt;ol&gt;
+&lt;li&gt;输出  
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="python" scheme="https://antwork.github.io/tags/python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>常用app url scheme</title>
+    <link href="https://antwork.github.io/2015/02/10/2015-02-10-usual-app-scheme/"/>
+    <id>https://antwork.github.io/2015/02/10/2015-02-10-usual-app-scheme/</id>
+    <published>2015-02-10T01:52:12.000Z</published>
+    <updated>2017-01-21T07:59:29.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>微信电话本:  sharecalllog://        </p>
+<p>微信: wechat://        </p>
+<p>怎么获取app的 url scheme 参考网址:<a href="http://stackoverflow.com/questions/6845693/can-i-extract-the-custom-url-scheme-from-a-ipa-file" target="_blank" rel="external">http://stackoverflow.com/questions/6845693/can-i-extract-the-custom-url-scheme-from-a-ipa-file</a></p>
+<p>Yes, this is possible. First, unzip the .ipa file. (you can rename it with .zip to do this). Then, inside the .ipa file, you will find there is a Info.plist file. You can parse that file, look for “CFBundleURLSchemes” and you will see first the app id followed by the Custom URL if one is defined for the app.        </p>
+<p>翻译:将下载的ipa后缀改为.zip,解压,找到应用中的info.plist,然后找到CFBundleURLSchemes这个key,找到第一个值,如weichat,则url scheme为 wechat://,在手机的safari中尝试下</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;微信电话本:  sharecalllog://        &lt;/p&gt;
+&lt;p&gt;微信: wechat://        &lt;/p&gt;
+&lt;p&gt;怎么获取app的 url scheme 参考网址:&lt;a href=&quot;http://stackoverflow.com/questions/
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="ios" scheme="https://antwork.github.io/tags/ios/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>json基础及解析</title>
+    <link href="https://antwork.github.io/2015/02/09/2015-02-09-json-analysis/"/>
+    <id>https://antwork.github.io/2015/02/09/2015-02-09-json-analysis/</id>
+    <published>2015-02-09T01:46:12.000Z</published>
+    <updated>2017-01-21T07:59:28.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="json格式解析"><a href="#json格式解析" class="headerlink" title="json格式解析"></a>json格式解析</h2><ol>
+<li>格式2.     <ul>
+<li>json两种构建方法:键值对组,通俗的说就是字典        </li>
+<li>有序的值组,通俗的说就是数组    </li>
+</ul>
+</li>
+<li>元素构成3.<br> 2.1 object(字典),以一个 { 开始,以 } 结束, 每组子元素以字符串为key:value形式由,分隔开来<br> <img src="http://www.json.org/object.gif" alt=""><br> 示例:<code>{&quot;name&quot;:&quot;xuqiang&quot;,&quot;gender&quot;:&quot;男&quot;}</code><br> 2.2 array(数组),以一个 [ 开始, 以 ] 结束,每组value由, 分隔<br> <img src="http://www.json.org/array.gif" alt=""><br> 示例:<code>[&quot;张三&quot;,&quot;李四&quot;, &quot;王五&quot;]</code><br> 2.3 value(值), 可以是通过””包裹的字符串,可以是数字,可以是bool值(true,false),或者null,或者一个object(2.1),或者一个value(2.2),结构可以嵌套<br> <img src="http://www.json.org/value.gif" alt=""><br> 2.4 string(字符串),通过双引号包裹,如果中间需要加入引号,则需要使用\进行转移,如 <code>&quot;\&quot;&quot;</code>,表示有一个引号,下图列出了需要转义的字符<br> <img src="http://www.json.org/string.gif" alt=""><br> 2.5 number(数字),一般使用十进制,不进行详细说明<br> <img src="http://www.json.org/number.gif" alt=""></li>
+<li>在线解析辅助<br> <a href="http://json.parser.online.fr" target="_blank" rel="external">www.bejson.com</a><br> <a href="http://json.parser.online.fr" target="_blank" rel="external">http://json.parser.online.fr</a></li>
+<li>使用示例:</li>
+<li>iOS解析JSON</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h2 id=&quot;json格式解析&quot;&gt;&lt;a href=&quot;#json格式解析&quot; class=&quot;headerlink&quot; title=&quot;json格式解析&quot;&gt;&lt;/a&gt;json格式解析&lt;/h2&gt;&lt;ol&gt;
+&lt;li&gt;格式2.     &lt;ul&gt;
+&lt;li&gt;json两种构建方法:键值对组,通俗的说就是
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="json" scheme="https://antwork.github.io/tags/json/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>ios NSObject学习</title>
+    <link href="https://antwork.github.io/2015/02/06/2015-02-06-objectnote/"/>
+    <id>https://antwork.github.io/2015/02/06/2015-02-06-objectnote/</id>
+    <published>2015-02-06T01:46:12.000Z</published>
+    <updated>2017-01-21T07:59:27.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>加载, 初始化</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;加载, 初始化&lt;/p&gt;
+
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="ios" scheme="https://antwork.github.io/tags/ios/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>支付宝sdk藏得如此之深</title>
+    <link href="https://antwork.github.io/2015/02/02/2015-02-02-alipay/"/>
+    <id>https://antwork.github.io/2015/02/02/2015-02-02-alipay/</id>
+    <published>2015-02-02T14:58:12.000Z</published>
+    <updated>2017-01-21T07:59:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>网址:<a href="https://b.alipay.com/order/productDetail.htm?productId=2013080604609654&amp;tabId=4#ps-tabinfo-hash" target="_blank" rel="external">https://b.alipay.com/order/productDetail.htm?productId=2013080604609654&amp;tabId=4#ps-tabinfo-hash</a> 吓尿了,找了半天没找到</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;网址:&lt;a href=&quot;https://b.alipay.com/order/productDetail.htm?productId=2013080604609654&amp;amp;tabId=4#ps-tabinfo-hash&quot; target=&quot;_blank&quot; rel=&quot;ext
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="ios" scheme="https://antwork.github.io/tags/ios/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>怎么导出p12的根证书</title>
+    <link href="https://antwork.github.io/2015/01/28/2015-01-28-export-root-auth/"/>
+    <id>https://antwork.github.io/2015/01/28/2015-01-28-export-root-auth/</id>
+    <published>2015-01-28T10:02:12.000Z</published>
+    <updated>2017-01-21T07:59:46.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>###导出根证书步骤        </p>
+<p>步骤1 ：在LauchPad中找到“钥匙串”这个应用， 打开    </p>
+<p><a href="/album/root_auth/root_auth_1.png"><img src="/album/root_auth/root_auth_1.png" alt=""></a>     </p>
+<p>步骤2：打开的“钥匙串”应用如下，如下图，选择“登录”-“证书”，在右边找到自己的证书，（如果没有像下图展开，则单击2旁边那个三角展开），按住command键同时选中两项，右击“导出2项”。    </p>
+<p><a href="/album/root_auth/root_auth_2.png"><img src="/album/root_auth/root_auth_2.png" alt=""></a>    </p>
+<p>步骤3：保存，选择存放路径，文件格式选择.p12，选择存储   </p>
+<p><a href="/album/root_auth/root_auth_3.png"><img src="/album/root_auth/root_auth_3.png" alt=""></a>    </p>
+<p>步骤4：输入密码（该密码用于使用.p12证书的人，使用的时候需要输入密码此才能完成导入）    </p>
+<p><a href="/album/root_auth/root_auth_4.png"><img src="/album/root_auth/root_auth_4.png" alt=""></a>   </p>
+<p>步骤5：选择“好”，保存本地  </p>
+<p>###使用p12证书        </p>
+<ol>
+<li><p>双击p12证书，输入密码（导出的时候设置密码）   </p>
+</li>
+<li><p>重复导出步骤1，2查看证书是否存在    </p>
+</li>
+</ol>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###导出根证书步骤        &lt;/p&gt;
+&lt;p&gt;步骤1 ：在LauchPad中找到“钥匙串”这个应用， 打开    &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;/album/root_auth/root_auth_1.png&quot;&gt;&lt;img src=&quot;/album/root_auth
+    
+    </summary>
+    
+      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
+    
+    
+      <category term="ios" scheme="https://antwork.github.io/tags/ios/"/>
+    
+  </entry>
+  
+</feed>
