@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="反思, 总结, 记录"><title>Markdown基本语法 | XuQ's Blog</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Markdown基本语法</h1><a id="logo" href="/.">XuQ's Blog</a><p class="description">Stay Hungry Stay Foolish</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Markdown基本语法</h1><div class="post-meta">Oct 27, 2014<script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><p>本文为<a href="http://antwork.github.io" target="_blank" rel="external">antwork</a>原创，转载请注明作者及出处！</p>
+<p>翻译原文网站:<a href="http://daringfireball.net/projects/markdown/" target="_blank" rel="external">http://daringfireball.net/projects/markdown/</a>,根据原文分为两篇来开展,有兴趣且英文好的童鞋建议看原版 :)</p>
+<ul>
+<li><a href="site.baseurl/2014/10/27/markdown2.md">Markdown基本语法</a>   </li>
+<li><a href="site.baseurl/2014/10/27/markdown3.md">Markdown语法进阶</a>  </li>
+</ul>
+<p>本文原文地址:<a href="http://daringfireball.net/projects/markdown/basics" target="_blank" rel="external">http://daringfireball.net/projects/markdown/basics</a></p>
+<h1 id="学习Markdonw语法主旨"><a href="#学习Markdonw语法主旨" class="headerlink" title="学习Markdonw语法主旨"></a>学习Markdonw语法主旨</h1><hr>
+<p>本页面提供一个使用Markdown的简单使用方法,<a href="site.baseurl/2014/10/27/markdown3.md">语法</a>页面提供更加完整详细的文档和语法特征,Markdown很容易学,你可以查阅一些实例就能学会.本文的实例采用样式前后对比的形式,展示实例的语法和输出的HTML,(译者再加入了实际的显示效果)</p>
+<p>学习markdown最简单有效的方法就是实践, <a href="http://daringfireball.net/projects/markdown/dingus" target="_blank" rel="external">Dingus</a>可以让你在线输入Markdown格式的纯文本,然后转化为XHTML.</p>
+<p>注释:原文档本身就是用Markdown;查看原网页源代码请单击<a href="http://daringfireball.net/projects/markdown/syntax.text" target="_blank" rel="external">这里</a>  </p>
+<h2 id="段落-标题-区块"><a href="#段落-标题-区块" class="headerlink" title="##段落,标题,区块"></a>##段落,标题,区块</h2><p>段落是由一到多行连续的文本组成,使用一到多个空行进行分隔.(Markdown的空行看起来像一个空行: 一行只包含空白和tabs的话就被当做一个空行).普通的段落不应该使用空白或tab来进行缩进   </p>
+<p>Markdown 提供两种样式的标题:Setext 和 atx<br>采用Setext样式的的</p><h1>和<h2>分别通过在文字底部添加等号(=)和连字号(-)来实现<br>atx样式的标题通过在行首添加1-6个井字号(#)来标记标题等级(h1~h6)<p></p>
+<p>Blockquotes使用邮件格式的’&gt;’大于号来标明</p>
+<ul>
+<li>####MarkDown代码:   </li>
+</ul>
+<hr>
+<pre><code>A First Level Header
+====================
+
+A Second Level Header
+---------------------
+
+Now is the time for all good men to come to
+the aid of their country. This is just a
+regular paragraph.
+
+The quick brown fox jumped over the lazy
+</code></pre><p>dog’s back.</p>
+<pre><code>### Header 3
+
+&gt; This is a blockquote.
+&gt; 
+&gt; This is the second paragraph in the blockquote.
+&gt;
+&gt; ## This is an H2 in a blockquote
+</code></pre><hr>
+<ul>
+<li>####输出HTML代码:</li>
+</ul>
+<hr>
+<pre><code>&lt;h1&gt;A First Level Header&lt;/h1&gt;
+
+&lt;h2&gt;A Second Level Header&lt;/h2&gt;
+
+&lt;p&gt;Now is the time for all good men to come to
+the aid of their country. This is just a
+regular paragraph.&lt;/p&gt;
+
+&lt;p&gt;The quick brown fox jumped over the lazy
+dog&apos;s back.&lt;/p&gt;
+
+&lt;h3&gt;Header 3&lt;/h3&gt;
+
+&lt;blockquote&gt;
+    &lt;p&gt;This is a blockquote.&lt;/p&gt;
+
+    &lt;p&gt;This is the second paragraph in the blockquote.&lt;/p&gt;
+
+    &lt;h2&gt;This is an H2 in a blockquote&lt;/h2&gt;
+&lt;/blockquote&gt;
+</code></pre><hr>
+<h2 id="实际效果"><a href="#实际效果" class="headerlink" title="- ####实际效果:"></a>- ####实际效果:</h2><h1 id="A-First-Level-Header"><a href="#A-First-Level-Header" class="headerlink" title="A First Level Header"></a>A First Level Header</h1><h2 id="A-Second-Level-Header"><a href="#A-Second-Level-Header" class="headerlink" title="A Second Level Header"></a>A Second Level Header</h2><p>Now is the time for all good men to come to<br>the aid of their country. This is just a<br>regular paragraph.</p>
+<p>The quick brown fox jumped over the lazy<br>dog’s back.</p>
+<h3 id="Header-3"><a href="#Header-3" class="headerlink" title="Header 3"></a>Header 3</h3><blockquote>
+<p>This is a blockquote.</p>
+<p>This is the second paragraph in the blockquote.</p>
+<h2 id="This-is-an-H2-in-a-blockquote"><a href="#This-is-an-H2-in-a-blockquote" class="headerlink" title="This is an H2 in a blockquote"></a>This is an H2 in a blockquote</h2></blockquote>
+<hr>
+<p>##强调语法:  </p>
+<p>Markdown使用星号和下划线来强调</p>
+<ul>
+<li>####Markdown代码:   </li>
+</ul>
+<hr>
+<pre><code>Some of these words *are emphasized*.   
+Some of these words _are emphasized also_.   
+
+Use two asterisks for **strong emphasis**.  
+Or, if you prefer, __use two underscores instead__. 
+</code></pre><hr>
+<ul>
+<li><p>####输出为HTML:</p>
+<hr>
+  <p>Some of these words <em>are emphasized</em>. <br><br>  Some of these words <em>are emphasized also</em>.   </p>
+
+  <p>Use two asterisks for <strong>strong emphasis</strong>. <br><br>  Or, if you prefer, <strong>use two underscores instead</strong>. </p>
+
+</li>
+</ul>
+<hr>
+<h2 id="显示效果"><a href="#显示效果" class="headerlink" title="- ####显示效果:   "></a>- ####显示效果:   </h2><p>Some of these words <em>are emphasized</em>.<br>Some of these words <em>are emphasized also</em>.   </p>
+<p>Use two asterisks for <strong>strong emphasis</strong>.<br>Or, if you prefer, <strong>use two underscores instead</strong>.   </p>
+<hr>
+<p>##列表<br>无序列表采用星号,减号和加号来标记</p>
+<ul>
+<li>####Markdown源码  </li>
+</ul>
+<hr>
+<pre><code>*   Candy.
+*   Gum.
+*   Booze.   
+</code></pre><hr>
+<ul>
+<li>####输出HTML</li>
+</ul>
+<hr>
+<pre><code>&lt;ul&gt;
+&lt;li&gt;Candy.&lt;/li&gt;
+&lt;li&gt;Gum.&lt;/li&gt;
+&lt;li&gt;Booze.&lt;/li&gt;
+&lt;/ul&gt;
+</code></pre><hr>
+<h2 id="实际效果-1"><a href="#实际效果-1" class="headerlink" title="- ####实际效果    "></a>- ####实际效果    </h2><ul>
+<li>Candy.</li>
+<li>Gum.</li>
+<li>Booze.</li>
+</ul>
+<hr>
+<p>有序列表采用常规数字加句号   </p>
+<ul>
+<li>####Markdown有序列表源码    </li>
+</ul>
+<hr>
+<pre><code>1. Red  
+2. Green
+3. Blue
+</code></pre><hr>
+<ul>
+<li>####输出为HTML源码        </li>
+</ul>
+<hr>
+<pre><code>&lt;ol&gt;
+&lt;li&gt;Red  &lt;/li&gt;
+&lt;li&gt;Green&lt;/li&gt;
+&lt;li&gt;Blue&lt;/li&gt;
+&lt;/ol&gt;
+</code></pre><hr>
+<h2 id="实际效果-2"><a href="#实际效果-2" class="headerlink" title="- ####实际效果            "></a>- ####实际效果            </h2><ol>
+<li>Red  </li>
+<li>Green</li>
+<li>Blue</li>
+</ol>
+<hr>
+<p>如果你在行间添加了空行,你会得到段落标识</p><p>来标记列表项,你可以使用4个空格或者1个tab来创造多段落列表项    </p>
+<ul>
+<li>####Markdown源码:    </li>
+</ul>
+<hr>
+<pre><code>*   A list item.
+
+    With multiple paragraphs.
+
+*   Another item in the list.    
+</code></pre><hr>
+<ul>
+<li>####输出:    </li>
+</ul>
+<hr>
+<pre><code>&lt;ul&gt;
+&lt;li&gt;&lt;p&gt;A list item.&lt;/p&gt;
+&lt;p&gt;With multiple paragraphs.&lt;/p&gt;&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Another item in the list.&lt;/p&gt;&lt;/li&gt;
+&lt;/ul&gt;    
+</code></pre><hr>
+<ul>
+<li>####显示效果    </li>
+</ul>
+<hr>
+<ul>
+<li><p>A list item.</p>
+<p>With multiple paragraphs.</p>
+</li>
+<li><p>Another item in the list.    </p>
+</li>
+</ul>
+<hr>
+<h2 id="链接"><a href="#链接" class="headerlink" title="##链接"></a>##链接</h2><p>Markdown支持两种形式的链接:内联和引用,两种形式都采用方括号来划定链接文字界限.    </p>
+<p>内联链接使用圆括号将链接紧跟在链接文字后,例如:</p>
+<hr>
+<pre><code>这是一个[链接](http://example.com/).    
+</code></pre><hr>
+<p>输出为HTML:    </p>
+<hr>
+<pre><code>&lt;p&gt;这是一个&lt;a href=&quot;http://example.com/&quot;&gt;链接&lt;/a&gt;.&lt;/p&gt;
+</code></pre><hr>
+<p>显示效果:</p>
+<hr>
+<p>这是一个<a href="http://example.com/" target="_blank" rel="external">链接</a>.    </p>
+<hr>
+<p>可选择的,你可以在圆括号内包含一个title属性:</p>
+<hr>
+<pre><code>This is an [example link](http://example.com/ &quot;With a Title&quot;).    
+</code></pre><hr>
+<p>输出为HTML:    </p>
+<hr>
+<pre><code>&lt;p&gt;This is an &lt;a href=&quot;http://example.com/&quot; title=&quot;With a Title&quot;&gt;
+</code></pre><p>example link.</p><p></p>
+<hr>
+<p>显示效果:</p>
+<hr>
+<p>his is an <a href="http://example.com/" title="With a Title" target="_blank" rel="external">example link</a>.        </p>
+<p>关联样式链接允许你通过名字去关联链接,允许你在文档的其他地方定义:</p>
+<pre><code>I get 10 times more traffic from [Google][1] than from
+</code></pre><p><a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="external">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="external">MSN</a>.</p>
+<pre><code>[1]: http://google.com/        &quot;Google&quot;
+[2]: http://search.yahoo.com/  &quot;Yahoo Search&quot;
+[3]: http://search.msn.com/    &quot;MSN Search&quot;    
+</code></pre><p>转化为HTML代码:</p>
+<pre><code>&lt;p&gt;I get 10 times more traffic from &lt;a href=&quot;http://google.com/&quot;
+</code></pre><p>title=”Google”&gt;Google than from <a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="external">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="external">MSN</a>.</p><p></p>
+<p>实际显示效果:  </p>
+<p>I get 10 times more traffic from <a href="http://google.com/" title="Google" target="_blank" rel="external">Google</a> than from<br><a href="http://search.yahoo.com/" title="Yahoo Search" target="_blank" rel="external">Yahoo</a> or <a href="http://search.msn.com/" title="MSN Search" target="_blank" rel="external">MSN</a>.</p>
+<hr>
+<p>title属性是可选的,超链接名字可以包含字母,数字和空格,但是大小写不敏感,例如以下源码:</p>
+<pre><code>I start my morning with a cup of coffee and
+[The New York Times][NY Times].
+
+[ny times]: http://www.nytimes.com/
+</code></pre><p>输出为HTML代码:    </p>
+<pre><code>&lt;p&gt;I start my morning with a cup of coffee and
+</code></pre><p><a href="http://www.nytimes.com/" target="_blank" rel="external">The New York Times</a>.</p><p></p>
+<p>实际显示效果:</p>
+<hr>
+<p>I start my morning with a cup of coffee and<br><a href="http://www.nytimes.com/" target="_blank" rel="external">The New York Times</a>.</p>
+<hr>
+<p>##图片<br>图片语法非常像链接语法.<br>内联样式如下(标题可选):</p>
+<pre><code>![alt text](/path/to/im.jpg &quot;Title&quot;)
+</code></pre><p>引用样式:</p>
+<pre><code>![alt text][id]
+
+[id]: /path/to/img.jpg &quot;Title&quot;
+</code></pre><p>输出HTML为:</p>
+<pre><code>&lt;img src=&quot;/path/to/img.jpg&quot; alt=&quot;alt text&quot; title=&quot;Title&quot; /&gt;
+</code></pre><p>##代码<br>在常规段落中,你可以用反引号将文字括起来,任何&amp;号和尖括号(&lt;&gt;)将会自动被翻译为HTML实体,这样就方便了使用Markdown来创建HTML的示例:</p>
+<pre><code>I strongly recommend against using any `&lt;blink&gt;` tags.
+
+I wish SmartyPants used named entities like `&amp;mdash;`
+instead of decimal-encoded entites like `&amp;#8212;`.
+</code></pre><p>输出为HTML:</p>
+<pre><code>&lt;p&gt;I strongly recommend against using any
+&lt;code&gt;&amp;lt;blink&amp;gt;&lt;/code&gt; tags.&lt;/p&gt;
+
+&lt;p&gt;I wish SmartyPants used named entities like
+&lt;code&gt;&amp;amp;mdash;&lt;/code&gt; instead of decimal-encoded
+entites like &lt;code&gt;&amp;amp;#8212;&lt;/code&gt;.&lt;/p&gt;
+</code></pre><p>实际显示效果:</p>
+<hr>
+<p>I strongly recommend against using any <code>&lt;blink&gt;</code> tags.</p>
+<p>I wish SmartyPants used named entities like <code>&amp;mdash;</code><br>instead of decimal-encoded entites like <code>&amp;#8212;</code>.</p>
+<hr>
+<p>为了指定某一块预定格式(pre-formatted)代码,你可以在每一行代码前添加4个空格或者一个tab.就像使用代码区域,&amp;,&lt;,和&gt;字符一样,会被自动转义.<br>Markdown源码:</p>
+<pre><code>If you want your page to validate under XHTML 1.0 Strict,
+you&apos;ve got to put paragraph tags in your blockquotes:
+
+&lt;blockquote&gt;
+    &lt;p&gt;For example.&lt;/p&gt;
+&lt;/blockquote&gt;
+</code></pre><p>得到HTML代码如下:</p>
+<pre><code>&lt;p&gt;If you want your page to validate under XHTML 1.0 Strict,
+you&apos;ve got to put paragraph tags in your blockquotes:&lt;/p&gt;
+
+&lt;pre&gt;&lt;code&gt;&amp;lt;blockquote&amp;gt;
+    &amp;lt;p&amp;gt;For example.&amp;lt;/p&amp;gt;
+&amp;lt;/blockquote&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+</code></pre><hr>
+<p>(完)</p>
+</h2></h1></div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2014/10/27/2014-10-27-markdown2/" data-id="ciy70tw0q00063l1v9urc2iqs" class="article-share-link">分享到</a><div class="tags"><a href="/tags/markdown-翻译/">markdown 翻译</a></div><div class="post-nav"><a href="/2014/10/27/2014-10-27-markdown3/" class="pre">Markdown语法进阶</a><a href="/2014/10/26/2014-10-26-study-markdown/" class="next">Markdown语法的学习和实践</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/备忘/">备忘</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/文档/">文档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/日志/">日志</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/ios-Icon-启动图-Default/" style="font-size: 15px;">ios, Icon, 启动图, Default</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/markdown-翻译/" style="font-size: 15px;">markdown 翻译</a> <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/ios/" style="font-size: 15px;">ios</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/json/" style="font-size: 15px;">json</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/markdown/" style="font-size: 15px;">markdown</a> <a href="/tags/ios-ad-hoc-企业发布-发布-In-house/" style="font-size: 15px;">ios, ad-hoc, 企业发布 ,发布, In house,</a> <a href="/tags/python-flask-alchemy/" style="font-size: 15px;">python, flask, alchemy</a> <a href="/tags/python-flask-sqlalchemy-database/" style="font-size: 15px;">python, flask, sqlalchemy, database</a> <a href="/tags/html-css/" style="font-size: 15px;">html, css</a> <a href="/tags/python-pip-flask/" style="font-size: 15px;">python, pip, flask</a> <a href="/tags/flask-怎么使用virtualenv/" style="font-size: 15px;">flask, 怎么使用virtualenv</a> <a href="/tags/sqlite3/" style="font-size: 15px;">sqlite3</a> <a href="/tags/Flask/" style="font-size: 15px;">Flask</a> <a href="/tags/flask-sqlalchemy/" style="font-size: 15px;">flask, sqlalchemy</a> <a href="/tags/2017/" style="font-size: 15px;">2017</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/01/21/Hello-2017/">Hello 2017</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/05/06/2015-05-06-flask-server/">Flask后台</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/05/06/2015-05-06-sqlalchemy-study/">SQLAlchemy学习备份</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/05/06/2015-05-06-git/">git神图</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/28/2015-04-28-sqlite-query/">sqlite3的使用1-操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/28/2015-04-28-sqlite3-base/">sqlite3的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/28/2015-04-28-mark-webs/">常用网址备份</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/18/2015-04-18-flask-base/">Flask和SQLAlchemy</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/31/2015-03-31-pip/">Python pip, flask使用备忘</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/27/2015-03-27-css-base/">CSS样式基础学习笔记</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">XuQ's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>

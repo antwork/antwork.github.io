@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta http-equiv="content-type" content="text/html; charset=utf-8"><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport"><meta content="yes" name="apple-mobile-web-app-capable"><meta content="black-translucent" name="apple-mobile-web-app-status-bar-style"><meta content="telephone=no" name="format-detection"><meta name="description" content="反思, 总结, 记录"><title>Markdown语法的学习和实践 | XuQ's Blog</title><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/normalize/5.0.0/normalize.min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/pure-min.css"><link rel="stylesheet" type="text/css" href="//cdn.bootcss.com/pure/0.6.0/grids-responsive-min.css"><link rel="stylesheet" type="text/css" href="/css/style.css?v=0.0.0"><link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css"><script type="text/javascript" src="//cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script><link rel="Shortcut Icon" type="image/x-icon" href="/favicon.ico"><link rel="apple-touch-icon" href="/apple-touch-icon.png"><link rel="apple-touch-icon-precomposed" href="/apple-touch-icon.png"></head><body><div class="body_container"><div id="header"><div class="site-name"><h1 class="hidden">Markdown语法的学习和实践</h1><a id="logo" href="/.">XuQ's Blog</a><p class="description">Stay Hungry Stay Foolish</p></div><div id="nav-menu"><a href="/." class="current"><i class="fa fa-home"> 首页</i></a><a href="/archives/"><i class="fa fa-archive"> 归档</i></a><a href="/about/"><i class="fa fa-user"> 关于</i></a><a href="/atom.xml"><i class="fa fa-rss"> 订阅</i></a></div></div><div id="layout" class="pure-g"><div class="pure-u-1 pure-u-md-3-4"><div class="content_container"><div class="post"><h1 class="post-title">Markdown语法的学习和实践</h1><div class="post-meta">Oct 26, 2014<span> | </span><span class="category"><a href="/categories/文档/">文档</a></span><script src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js" async></script><span id="busuanzi_container_page_pv"> | <span id="busuanzi_value_page_pv"></span><span> Hits</span></span></div><div class="post-content"><p>本文为<a href="http://antwork.github.io" target="_blank" rel="external">antwork</a>原创，转载请注明作者及出处！</p>
+<h2 id="目录"><a href="#目录" class="headerlink" title="##目录"></a>##目录</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#title"><strong>标题</strong></a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#block"><strong>区块元素</strong></a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#link"><strong>链接</strong></a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#imagelink"><strong>图片链接</strong></a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#code"><strong>代码插入</strong></a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#reference"><strong>参考</strong></a></p>
+<p><a id="introduce" name="introduce"> </a> </p>
+<h2 id="标题"><a href="#标题" class="headerlink" title="##标题"></a>##标题</h2><p>有两种表示段落的方式:</p>
+<ul>
+<li>类Setext形式</li>
+<li>Atx形式</li>
+</ul>
+<p><strong>类Setext形式</strong>:只能表示两级,最高阶标题=和第二阶标题-, 例如:    </p>
+<h1 id="这是H1标题"><a href="#这是H1标题" class="headerlink" title="这是H1标题"></a>这是H1标题</h1><h2 id="这是H2标题"><a href="#这是H2标题" class="headerlink" title="这是H2标题"></a>这是H2标题</h2><p>任何数量的 = 和 - 都可以有效果<br>效果:</p>
+<p>这是H1标题<br>=</p>
+<p>这是H2标题<br>-</p>
+<p>任何数量的 = 和 - 都可以有效果</p>
+<p><strong>[Warn]</strong>连续的标题需要中间添加一行空白行</p>
+<p><strong>类 Atx形式:</strong>在行首插入1到6个#，对应到标题1到6阶，例如：  </p>
+<h1 id="这是-H1"><a href="#这是-H1" class="headerlink" title="这是 H1"></a>这是 H1</h1><h2 id="这是-H2"><a href="#这是-H2" class="headerlink" title="这是 H2"></a>这是 H2</h2><h6 id="这是-H6"><a href="#这是-H6" class="headerlink" title="这是 H6"></a>这是 H6</h6><p>效果:  </p>
+<h1 id="这是-H1-1"><a href="#这是-H1-1" class="headerlink" title="这是 H1"></a>这是 H1</h1><h2 id="这是-H2-1"><a href="#这是-H2-1" class="headerlink" title="这是 H2"></a>这是 H2</h2><h6 id="这是-H6-1"><a href="#这是-H6-1" class="headerlink" title="这是 H6"></a>这是 H6</h6><p><strong>[Warn]</strong>第一个标题与顶部需要留空白行</p>
+<p><a id="block" name="block"> </a></p>
+<p>##区块元素</p>
+<h3 id="nbsp-nbsp-段落和换行"><a href="#nbsp-nbsp-段落和换行" class="headerlink" title="&nbsp;&nbsp;段落和换行"></a>&nbsp;&nbsp;段落和换行</h3><hr>
+<p><strong>段落</strong>:由一个或者多个连续的文本组成,它的前后要有一个以上的空格,我的建议是段落的前后都留空行,</p>
+<p>比如这样:</p>
+<p>我是段落1,我很孤独</p>
+<p>我是段落2,我很孤独2</p>
+<p>得到的效果图如下:</p>
+<p>我是段落1,我很孤独</p>
+<p>我是段落2,我很孤独</p>
+<p><strong>换行</strong>:这个有些狗血,在插入处先按入两个以上的空格然后回车,可以得到<br>的效果,两者可以通用,注意我很孤独后面还有两个空白</p>
+<p>我是段落1,我很孤独<br>我是段落2,我很孤独</p>
+<p>得到的效果图如下:</p>
+<p>我是段落1,我很孤独<br>我是段落2,我很孤独</p>
+<p>我是段落1,我很孤独<br><br>我是段落2,我很孤独</p>
+<p>得到的效果图如下:</p>
+<p>我是段落1,我很孤独<br>我是段落2,我很孤独</p>
+<p><a href="link" name="link"> </a></p>
+<h2 id="链接"><a href="#链接" class="headerlink" title="##链接"></a>##链接</h2><p>链接文字使用[方括号]来标记<br>行内式:只要在方括号后面紧接着圆括号并插入网址链接即可,如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如</p>
+<p>This is <a href="http://example.com/" title="Title" target="_blank" rel="external">an example</a> inline link.</p>
+<p><a href="http://example.net/" target="_blank" rel="external">This link</a> has no title attribute.</p>
+<p>得到效果图如下:</p>
+<p>This is <a href="http://example.com/" title="Title" target="_blank" rel="external">an example</a> inline link.</p>
+<p><a href="http://example.net/" target="_blank" rel="external">This link</a> has no title attribute.</p>
+<p><a href="imagelink" name="imagelink"> </a></p>
+<h2 id="图片链接"><a href="#图片链接" class="headerlink" title="##图片链接"></a>##图片链接</h2><p>格式:![方括号](链接)<br>示例:   </p>
+<p>垃圾百度<img src="http://www.baidu.com/img/bdlogo.png" alt="Icon"></p>
+<p>得到效果图如下:<br>垃圾百度<img src="http://www.baidu.com/img/bdlogo.png" alt="Icon"></p>
+<p><a id="code" name="code"> </a></p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="#代码"></a>#代码</h2><p>缩进四个空白(Tab)<br>示例:    </p>
+<p>这是一个普通段落：</p>
+<pre><code>这是一个代码区块。
+</code></pre><p>效果:</p>
+<p>这是一个普通段落：</p>
+<pre><code>这是一个代码区块。
+</code></pre><p><a id="reference" name="reference"> </a></p>
+<h2 id="参考"><a href="#参考" class="headerlink" title="##参考"></a>##参考</h2><ol>
+<li>资源网址:<a href="wowubuntu.com/markdown">wowubuntu.com</a></li>
+<li>学习模板1:<a href="http://webfrogs.me" target="_blank" rel="external">WebFrogs</a></li>
+<li>学习模板2:<a href="http://www.yonsm.net" target="_blank" rel="external">Yonsm.NET</a></li>
+</ol>
+<hr>
+<h2 id="全文源代码如下"><a href="#全文源代码如下" class="headerlink" title="##全文源代码如下:"></a>##全文源代码如下:</h2><p>本文为<a href="http://antwork.github.io" target="_blank" rel="external">antwork</a>原创，转载请注明作者及出处！</p>
+<h2 id="目录-1"><a href="#目录-1" class="headerlink" title="##目录"></a>##目录</h2><p>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#title"><strong>标题</strong></a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#block"><strong>区块元素</strong></a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#link"><strong>链接</strong></a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#imagelink"><strong>图片链接</strong></a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#code"><strong>代码插入</strong></a><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="#reference"><strong>参考</strong></a></p>
+<p><a id="introduce" name="introduce"> </a> </p>
+<h2 id="标题-1"><a href="#标题-1" class="headerlink" title="##标题"></a>##标题</h2><p>有两种表示段落的方式:</p>
+<ul>
+<li>类Setext形式</li>
+<li>Atx形式</li>
+</ul>
+<p><strong>类Setext形式</strong>:只能表示两级,最高阶标题=和第二阶标题-, 例如:    </p>
+<h1 id="这是H1标题-1"><a href="#这是H1标题-1" class="headerlink" title="这是H1标题"></a>这是H1标题</h1><h2 id="这是H2标题-1"><a href="#这是H2标题-1" class="headerlink" title="这是H2标题"></a>这是H2标题</h2><p>任何数量的 = 和 - 都可以有效果</p>
+<p>效果:</p>
+<p>这是H1标题<br>=</p>
+<p>这是H2标题<br>-</p>
+<p>任何数量的 = 和 - 都可以有效果</p>
+<p><strong>[Warn]</strong>连续的标题需要中间添加一行空白行</p>
+<p><strong>类 Atx形式:</strong>在行首插入1到6个#，对应到标题1到6阶，例如：  </p>
+<h1 id="这是-H1-2"><a href="#这是-H1-2" class="headerlink" title="这是 H1"></a>这是 H1</h1><h2 id="这是-H2-2"><a href="#这是-H2-2" class="headerlink" title="这是 H2"></a>这是 H2</h2><h6 id="这是-H6-2"><a href="#这是-H6-2" class="headerlink" title="这是 H6"></a>这是 H6</h6><p>效果:  </p>
+<h1 id="这是-H1-3"><a href="#这是-H1-3" class="headerlink" title="这是 H1"></a>这是 H1</h1><h2 id="这是-H2-3"><a href="#这是-H2-3" class="headerlink" title="这是 H2"></a>这是 H2</h2><h6 id="这是-H6-3"><a href="#这是-H6-3" class="headerlink" title="这是 H6"></a>这是 H6</h6><p><strong>[Warn]</strong>第一个标题与顶部需要留空白行</p>
+<p><a id="block" name="block"> </a></p>
+<p>##区块元素</p>
+<h3 id="nbsp-nbsp-段落和换行-1"><a href="#nbsp-nbsp-段落和换行-1" class="headerlink" title="&nbsp;&nbsp;段落和换行"></a>&nbsp;&nbsp;段落和换行</h3><hr>
+<p><strong>段落</strong>:由一个或者多个连续的文本组成,它的前后要有一个以上的空格,我的建议是段落的前后都留空行,</p>
+<p>比如这样:</p>
+<p>我是段落1,我很孤独</p>
+<p>我是段落2,我很孤独2</p>
+<p>得到的效果图如下:</p>
+<p>我是段落1,我很孤独</p>
+<p>我是段落2,我很孤独</p>
+<p><strong>换行</strong>:这个有些狗血,在插入处先按入两个以上的空格然后回车,可以得到<br>的效果,两者可以通用,注意我很孤独后面还有两个空白</p>
+<p>我是段落1,我很孤独<br>我是段落2,我很孤独</p>
+<p>得到的效果图如下:</p>
+<p>我是段落1,我很孤独<br>我是段落2,我很孤独</p>
+<p>我是段落1,我很孤独<br><br>我是段落2,我很孤独</p>
+<p>得到的效果图如下:</p>
+<p>我是段落1,我很孤独<br>我是段落2,我很孤独</p>
+<p><a href="link" name="link"> </a></p>
+<h2 id="链接-1"><a href="#链接-1" class="headerlink" title="##链接"></a>##链接</h2><p>链接文字使用[方括号]来标记<br>行内式:只要在方括号后面紧接着圆括号并插入网址链接即可,如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如</p>
+<p>This is <a href="http://example.com/" title="Title" target="_blank" rel="external">an example</a> inline link.</p>
+<p><a href="http://example.net/" target="_blank" rel="external">This link</a> has no title attribute.</p>
+<p>得到效果图如下:</p>
+<p>This is <a href="http://example.com/" title="Title" target="_blank" rel="external">an example</a> inline link.</p>
+<p><a href="http://example.net/" target="_blank" rel="external">This link</a> has no title attribute.</p>
+<p><a href="imagelink" name="imagelink"> </a></p>
+<h2 id="图片链接-1"><a href="#图片链接-1" class="headerlink" title="##图片链接"></a>##图片链接</h2><p>格式:![方括号](链接)<br>示例:   </p>
+<p>垃圾百度<img src="http://www.baidu.com/img/bdlogo.png" alt="Icon"></p>
+<p>得到效果图如下:<br>垃圾百度<img src="http://www.baidu.com/img/bdlogo.png" alt="Icon"></p>
+<p><a id="code" name="code"> </a></p>
+<h2 id="代码-1"><a href="#代码-1" class="headerlink" title="#代码"></a>#代码</h2><p>缩进四个空白(Tab)<br>示例:    </p>
+<p>这是一个普通段落：</p>
+<pre><code>这是一个代码区块。
+</code></pre><p>效果:</p>
+<p>这是一个普通段落：</p>
+<pre><code>这是一个代码区块。
+</code></pre><p><a id="reference" name="reference"> </a></p>
+<h2 id="参考-1"><a href="#参考-1" class="headerlink" title="##参考"></a>##参考</h2><ol>
+<li>资源网址:<a href="wowubuntu.com/markdown">wowubuntu.com</a></li>
+<li>学习模板1:<a href="http://webfrogs.me" target="_blank" rel="external">WebFrogs</a></li>
+<li>学习模板2:<a href="http://www.yonsm.net" target="_blank" rel="external">Yonsm.NET</a></li>
+</ol>
+</div><script type="text/javascript" src="/js/share.js?v=0.0.0" async></script><a data-url="http://yoursite.com/2014/10/26/2014-10-26-study-markdown/" data-id="ciy70tw0i00013l1vpdxsqcfb" class="article-share-link">分享到</a><div class="tags"><a href="/tags/markdown/">markdown</a></div><div class="post-nav"><a href="/2014/10/27/2014-10-27-markdown2/" class="pre">Markdown基本语法</a><a href="/2014/10/25/2014-10-25-hello-blog/" class="next">我的 Blog 今天开通了……</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/备忘/">备忘</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/文档/">文档</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/日志/">日志</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/生活/">生活</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/ios-Icon-启动图-Default/" style="font-size: 15px;">ios, Icon, 启动图, Default</a> <a href="/tags/博客/" style="font-size: 15px;">博客</a> <a href="/tags/markdown-翻译/" style="font-size: 15px;">markdown 翻译</a> <a href="/tags/android/" style="font-size: 15px;">android</a> <a href="/tags/ios/" style="font-size: 15px;">ios</a> <a href="/tags/java/" style="font-size: 15px;">java</a> <a href="/tags/git/" style="font-size: 15px;">git</a> <a href="/tags/Linux/" style="font-size: 15px;">Linux</a> <a href="/tags/json/" style="font-size: 15px;">json</a> <a href="/tags/python/" style="font-size: 15px;">python</a> <a href="/tags/markdown/" style="font-size: 15px;">markdown</a> <a href="/tags/ios-ad-hoc-企业发布-发布-In-house/" style="font-size: 15px;">ios, ad-hoc, 企业发布 ,发布, In house,</a> <a href="/tags/python-flask-alchemy/" style="font-size: 15px;">python, flask, alchemy</a> <a href="/tags/python-flask-sqlalchemy-database/" style="font-size: 15px;">python, flask, sqlalchemy, database</a> <a href="/tags/html-css/" style="font-size: 15px;">html, css</a> <a href="/tags/python-pip-flask/" style="font-size: 15px;">python, pip, flask</a> <a href="/tags/flask-怎么使用virtualenv/" style="font-size: 15px;">flask, 怎么使用virtualenv</a> <a href="/tags/sqlite3/" style="font-size: 15px;">sqlite3</a> <a href="/tags/Flask/" style="font-size: 15px;">Flask</a> <a href="/tags/flask-sqlalchemy/" style="font-size: 15px;">flask, sqlalchemy</a> <a href="/tags/2017/" style="font-size: 15px;">2017</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/01/21/Hello-2017/">Hello 2017</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/05/06/2015-05-06-flask-server/">Flask后台</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/05/06/2015-05-06-sqlalchemy-study/">SQLAlchemy学习备份</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/05/06/2015-05-06-git/">git神图</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/28/2015-04-28-sqlite-query/">sqlite3的使用1-操作</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/28/2015-04-28-sqlite3-base/">sqlite3的使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/28/2015-04-28-mark-webs/">常用网址备份</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/04/18/2015-04-18-flask-base/">Flask和SQLAlchemy</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/31/2015-03-31-pip/">Python pip, flask使用备忘</a></li><li class="post-list-item"><a class="post-list-link" href="/2015/03/27/2015-03-27-css-base/">CSS样式基础学习笔记</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.example1.com/" title="site-name1" target="_blank">site-name1</a><ul></ul><a href="http://www.example2.com/" title="site-name2" target="_blank">site-name2</a><ul></ul><a href="http://www.example3.com/" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">XuQ's Blog.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=0.0.0" async></script><script type="text/javascript" src="/js/codeblock-resizer.js?v=0.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=0.0.0"></script></div></body></html>
