@@ -54,39 +54,6 @@
   </entry>
   
   <entry>
-    <title>Flask后台</title>
-    <link href="https://antwork.github.io/2015/05/06/2015-05-06-flask-server/"/>
-    <id>https://antwork.github.io/2015/05/06/2015-05-06-flask-server/</id>
-    <published>2015-05-06T09:23:12.000Z</published>
-    <updated>2017-01-21T10:52:20.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>讲述Flask项目框架，【未完成】<br><a id="more"></a></p>
-<ol>
-<li>搭建框架,大型Flask项目框架</li>
-</ol>
-<figure class="highlight 1c"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="string">|-flasky</span></div><div class="line">  <span class="string">|-app/</span></div><div class="line">    <span class="string">|-templates/</span></div><div class="line">    <span class="string">|-static/</span></div><div class="line">    <span class="string">|-main/</span></div><div class="line">      <span class="string">|-__init__.py</span></div><div class="line">      <span class="string">|-errors.py</span></div><div class="line">      <span class="string">|-forms.py</span></div><div class="line">      <span class="string">|-views.py</span></div><div class="line">    <span class="string">|-__init__.py</span></div><div class="line">    <span class="string">|-email.py</span></div><div class="line">    <span class="string">|-models.py</span></div><div class="line">  <span class="string">|-migrations/</span></div><div class="line">  <span class="string">|-tests/</span></div><div class="line">    <span class="string">|-__init__.py</span></div><div class="line">    <span class="string">|-test*.py</span></div><div class="line">  <span class="string">|-venv/</span></div><div class="line">  <span class="string">|-requirements.txt</span></div><div class="line">  <span class="string">|-config.py</span></div><div class="line">  <span class="string">|-manage.py</span></div></pre></td></tr></table></figure>
-<ol>
-<li><p>配置数据库models</p>
-</li>
-<li><p>写api</p>
-</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;讲述Flask项目框架，【未完成】&lt;br&gt;
-    
-    </summary>
-    
-      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
-    
-    
-      <category term="Flask" scheme="https://antwork.github.io/tags/Flask/"/>
-    
-  </entry>
-  
-  <entry>
     <title>SQLAlchemy学习备份</title>
     <link href="https://antwork.github.io/2015/05/06/2015-05-06-sqlalchemy-study/"/>
     <id>https://antwork.github.io/2015/05/06/2015-05-06-sqlalchemy-study/</id>
@@ -1018,6 +985,74 @@ class User(UserMixin, db.Model):
     
     
       <category term="ios" scheme="https://antwork.github.io/tags/ios/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Go的基础用法</title>
+    <link href="https://antwork.github.io/2014/12/01/2014-12-01-go-base/"/>
+    <id>https://antwork.github.io/2014/12/01/2014-12-01-go-base/</id>
+    <published>2014-12-01T04:48:12.000Z</published>
+    <updated>2017-01-21T08:09:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>###目标</p>
+<ul>
+<li>Revel+Xorm</li>
+<li>处理请求,Get/Post/Put    </li>
+<li>管理持久化,增删改查,模型确定和使用,更新升级数据库</li>
+<li>查询数据, SQL语句</li>
+<li><p>返回数据, RESTFUL请求回调</p>
+</li>
+<li><p>访问日志 log</p>
+</li>
+<li>同步异步</li>
+<li>环境配置</li>
+<li>Http协议</li>
+<li>Unbuntu的使用</li>
+<li>测试用例</li>
+<li>源码学习</li>
+<li>session cookie</li>
+</ul>
+<ol>
+<li>fmt输出:<br>fmt.Printf(“abc %d”, 1)<br>fmt.Println(“abc”)</li>
+</ol>
+<p>##Unbuntu下Golang的使用</p>
+<p>###源码安装:</p>
+<ol>
+<li>下载安装包</li>
+<li>解压到 /usr/local</li>
+<li><p>配置路径 编辑 ~/.profile,在最后添加 </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> GOROOT=/usr/<span class="built_in">local</span>/go</div><div class="line"><span class="built_in">export</span> GOBIN=<span class="variable">$GOROOT</span>/bin</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOBIN</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>运行bash文件,安装GO     </p>
+<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$:<span class="keyword">cd</span> /usr/local/<span class="keyword">go</span></div><div class="line">$:./<span class="keyword">all</span>.bash</div><div class="line"></div><div class="line">````	</div><div class="line"><span class="number">5</span>. 使路径生效,(重启电脑)或者 运行 $:<span class="keyword">source</span> ./.<span class="keyword">profile</span></div><div class="line"><span class="number">6</span>. 验证路径生效,验证 $:<span class="keyword">echo</span> $GOROOT, 成功即返回: /usr/local/<span class="keyword">go</span></div><div class="line"></div><div class="line"><span class="number">7</span>. 验证<span class="keyword">go</span>安装成功, 输入 $:<span class="keyword">go</span> <span class="keyword">version</span>,查看是否会返回相关配置</div><div class="line"><span class="number">8</span>. GOPATH	</div><div class="line">方法同GOROOT, 	</div><div class="line"></div><div class="line">备注:</div></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>以上 $GOPATH 目录约定有三个子目录：</p>
+<p>src 存放源代码（比如：.go .c .h .s等）<br>pkg 编译后生成的文件（比如：.a）<br>bin 编译后生成的可执行文件（为了方便，可以把此目录加入到 $PATH 变量中，如果有多个gopath，那么使用${GOPATH//://bin:}/bin添加所有的bin目录）</p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="section">###apt-get安装(版本可能不是最新版,要安装最新版,需要使用源码安装):</span></div><div class="line">-----------</div></pre></td></tr></table></figure>
+<p>在terminal中输入go,根据系统提示,运行相关的 sudo apt-get xxgo    </p>
+<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="section">###apt-get卸载:</span></div><div class="line">-----------</div></pre></td></tr></table></figure>
+<h1 id="卸载go"><a href="#卸载go" class="headerlink" title="卸载go"></a>卸载go</h1><p>sudo apt-get remove golang-go</p>
+<h1 id="卸载go并且删除相关配置"><a href="#卸载go并且删除相关配置" class="headerlink" title="卸载go并且删除相关配置"></a>卸载go并且删除相关配置</h1><p>sudo apt-get purge golang-go<br>```    </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;###目标&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Revel+Xorm&lt;/li&gt;
+&lt;li&gt;处理请求,Get/Post/Put    &lt;/li&gt;
+&lt;li&gt;管理持久化,增删改查,模型确定和使用,更新升级数据库&lt;/li&gt;
+&lt;li&gt;查询数据, SQL语句&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;返回数据, R
+    
+    </summary>
+    
+      <category term="文档" scheme="https://antwork.github.io/categories/%E6%96%87%E6%A1%A3/"/>
+    
+    
+      <category term="Linux" scheme="https://antwork.github.io/tags/Linux/"/>
     
   </entry>
   
