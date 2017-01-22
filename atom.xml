@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://antwork.github.io/"/>
-  <updated>2017-01-21T10:27:49.000Z</updated>
+  <updated>2017-01-22T05:14:20.000Z</updated>
   <id>https://antwork.github.io/</id>
   
   <author>
@@ -14,6 +14,116 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>HTTP权威指南读书笔记I</title>
+    <link href="https://antwork.github.io/2017/01/21/2017-01-21-https1/"/>
+    <id>https://antwork.github.io/2017/01/21/2017-01-21-https1/</id>
+    <published>2017-01-21T12:46:53.000Z</published>
+    <updated>2017-01-22T05:14:20.000Z</updated>
+    
+    <content type="html"><![CDATA[<ol>
+<li>Scheme介绍</li>
+<li>请求方法</li>
+<li>状态码</li>
+<li>名词解释        <a id="more"></a>    
+</li>
+</ol>
+<h3 id="Scheme-方案（差点老花眼看成schema了）"><a href="#Scheme-方案（差点老花眼看成schema了）" class="headerlink" title="Scheme:方案（差点老花眼看成schema了）"></a>Scheme:方案（<em>差点老花眼看成schema了</em>）</h3><ul>
+<li><strong>http</strong>: 默认端口80 <code>http://&lt;host&gt;:&lt;port&gt;/&lt;path&gt;?&lt;query&gt;#&lt;frag&gt;</code>    </li>
+<li><strong>https</strong>: 安全的http 默认端口443 <code>https://&lt;host&gt;:&lt;port&gt;/&lt;path&gt;?&lt;query&gt;#&lt;frag&gt;</code>    </li>
+<li><strong>mailto</strong>: <code>mailto:antwork@126.com</code>    </li>
+<li><strong>ftp</strong>: 文件传输协议URL可以用来上传下载，并获取FTP服务器上的目录结构内容的列表 <code>ftp://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;;&lt;params&gt;</code>    </li>
+<li><strong>rtsp</strong>, <strong>rtspu</strong>(u代表udp): Real Time Streaming Protocol:实时流传输协议 <code>rtsp://www.baidu.com:554/abc/video</code></li>
+<li><strong>file</strong>: 主机上可直接访问的文件 <code>file://&lt;host&gt;/&lt;path&gt;</code></li>
+<li><strong>news</strong>: 一些特定的文章或新闻组 <code>news:rec.arts.startrek</code></li>
+<li><strong>telnet</strong>: 访问交互式业务。通过telnet协议访问的交互式应用程序（资源）<code>telnet://&lt;user&gt;:&lt;password&gt;@&lt;host&gt;:&lt;port&gt;/</code></li>
+</ul>
+<h3 id="HTTP方法"><a href="#HTTP方法" class="headerlink" title="HTTP方法:"></a>HTTP方法:</h3><ol>
+<li><p><strong>GET</strong>        从服务器向客户端发送命名资源，应该安全使用的方法，多次调用不影响资源    </p>
+</li>
+<li><p><strong>PUT</strong>        将客户端的数据存储到一个命名的服务器        </p>
+</li>
+<li><strong>POST</strong>      将客户端数据发送到一个服务器网关应用程序    </li>
+<li><strong>DELETE</strong>   从服务器中删除命名资源    </li>
+<li><strong>HEAD</strong>       仅发送命名资源响应中的HTTP首部<br> <em>只返回首部的Get方法。用途：1.了解资源情况；2.确定对象的存在；3.检查是否被修改</em>        </li>
+<li><strong>TRACE</strong>        主要用于诊断，用于查看代理和其他应用程序对用户请求所产生效果。但是它依赖于中间件的处理，不是特别可靠。    </li>
+<li><strong>OPTION</strong> 请求服务器告知其支持的各种功能， 比如返回Allow: GET, POST, PUT, OPTIONS    </li>
+<li><strong>DELETE</strong> 请求服务器删除某资源，但是服务器可能在不通知客户端的情况下撤销请求，所以不是很可靠</li>
+</ol>
+<blockquote>
+<p>POST与PUT比较类似，都可以用来创建和更新资源，真实区别在于幂等性，简单来说，幂等的话调用多次和调用一次的副作用是一样的，POST不是幂等的，多次调用会创建多个新数据，而PUT应该是幂等的。其实具体怎么用都是使用者自己来决定，但是HTTP给到的规范，实施者还是应该根据两者区别正确使用，具体说明见参考链接。</p>
+</blockquote>
+<h3 id="状态码"><a href="#状态码" class="headerlink" title="状态码"></a>状态码</h3><table>
+<thead>
+<tr>
+<th>整体范围</th>
+<th>已定义范围</th>
+<th>分类</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>100~199</td>
+<td>100~101</td>
+<td>信息提示</td>
+</tr>
+<tr>
+<td>200~299</td>
+<td>200~206</td>
+<td>成功</td>
+</tr>
+<tr>
+<td>300~399</td>
+<td>300~305</td>
+<td>重定向</td>
+</tr>
+<tr>
+<td>400~499</td>
+<td>400~415</td>
+<td>客户端错误</td>
+</tr>
+<tr>
+<td>500~599</td>
+<td>500~505</td>
+<td>服务器错误</td>
+</tr>
+</tbody>
+</table>
+<h4 id="常见状态码："><a href="#常见状态码：" class="headerlink" title="常见状态码："></a>常见状态码：</h4><p>200 成功<br>301 在请求资源被移走时使用，头部的Location字段包含现有资源位置<br>302 与301类似，区别在于301是永久迁移，301是临时定位，将来还会用回老的url<br>401 未授权<br>404 没找到资源<br>500 后台错误    </p>
+<h3 id="名词解释："><a href="#名词解释：" class="headerlink" title="名词解释："></a>名词解释：</h3><p><strong>URI</strong>: <em>Uniform Resources Identifier</em> 统一资源标识符；理论名词.  </p>
+<ul>
+<li><strong>URL</strong>: <em>Uniform Resources Location</em> 统一资源定位符；是URI的一种表现形式，URI子集  </li>
+<li><strong>URN</strong>: <em>Uniform Resources Name</em> 统一资源名； 与资源无关，资源可以四处搬移，URI子集，试验阶段。  </li>
+</ul>
+<p><strong>MIME</strong>: <em>Multipurpose Internet Mail Extension</em> 多用途因特网邮件扩展，这个有点逗，原来用在接收多类型邮件，直接用在了HTTP了。</p>
+<h3 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h3><p>幂等性：<a href="http://www.cnblogs.com/weidagang2046/archive/2011/06/04/idempotence.html" target="_blank" rel="external">http://www.cnblogs.com/weidagang2046/archive/2011/06/04/idempotence.html</a>    </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;ol&gt;
+&lt;li&gt;Scheme介绍&lt;/li&gt;
+&lt;li&gt;请求方法&lt;/li&gt;
+&lt;li&gt;状态码&lt;/li&gt;
+&lt;li&gt;名词解释
+    
+    </summary>
+    
+      <category term="计算机" scheme="https://antwork.github.io/categories/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+    
+      <category term="2017" scheme="https://antwork.github.io/tags/2017/"/>
+    
+      <category term="HTTP" scheme="https://antwork.github.io/tags/HTTP/"/>
+    
+      <category term="HTTPS" scheme="https://antwork.github.io/tags/HTTPS/"/>
+    
+      <category term="计算机" scheme="https://antwork.github.io/tags/%E8%AE%A1%E7%AE%97%E6%9C%BA/"/>
+    
+      <category term="网络" scheme="https://antwork.github.io/tags/%E7%BD%91%E7%BB%9C/"/>
+    
+  </entry>
   
   <entry>
     <title>Hello 2017</title>
@@ -985,74 +1095,6 @@ class User(UserMixin, db.Model):
     
     
       <category term="ios" scheme="https://antwork.github.io/tags/ios/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Go的基础用法</title>
-    <link href="https://antwork.github.io/2014/12/01/2014-12-01-go-base/"/>
-    <id>https://antwork.github.io/2014/12/01/2014-12-01-go-base/</id>
-    <published>2014-12-01T04:48:12.000Z</published>
-    <updated>2017-01-21T08:09:14.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>###目标</p>
-<ul>
-<li>Revel+Xorm</li>
-<li>处理请求,Get/Post/Put    </li>
-<li>管理持久化,增删改查,模型确定和使用,更新升级数据库</li>
-<li>查询数据, SQL语句</li>
-<li><p>返回数据, RESTFUL请求回调</p>
-</li>
-<li><p>访问日志 log</p>
-</li>
-<li>同步异步</li>
-<li>环境配置</li>
-<li>Http协议</li>
-<li>Unbuntu的使用</li>
-<li>测试用例</li>
-<li>源码学习</li>
-<li>session cookie</li>
-</ul>
-<ol>
-<li>fmt输出:<br>fmt.Printf(“abc %d”, 1)<br>fmt.Println(“abc”)</li>
-</ol>
-<p>##Unbuntu下Golang的使用</p>
-<p>###源码安装:</p>
-<ol>
-<li>下载安装包</li>
-<li>解压到 /usr/local</li>
-<li><p>配置路径 编辑 ~/.profile,在最后添加 </p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">export</span> GOROOT=/usr/<span class="built_in">local</span>/go</div><div class="line"><span class="built_in">export</span> GOBIN=<span class="variable">$GOROOT</span>/bin</div><div class="line"><span class="built_in">export</span> PATH=<span class="variable">$PATH</span>:<span class="variable">$GOBIN</span></div></pre></td></tr></table></figure>
-</li>
-<li><p>运行bash文件,安装GO     </p>
-<figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">$:<span class="keyword">cd</span> /usr/local/<span class="keyword">go</span></div><div class="line">$:./<span class="keyword">all</span>.bash</div><div class="line"></div><div class="line">````	</div><div class="line"><span class="number">5</span>. 使路径生效,(重启电脑)或者 运行 $:<span class="keyword">source</span> ./.<span class="keyword">profile</span></div><div class="line"><span class="number">6</span>. 验证路径生效,验证 $:<span class="keyword">echo</span> $GOROOT, 成功即返回: /usr/local/<span class="keyword">go</span></div><div class="line"></div><div class="line"><span class="number">7</span>. 验证<span class="keyword">go</span>安装成功, 输入 $:<span class="keyword">go</span> <span class="keyword">version</span>,查看是否会返回相关配置</div><div class="line"><span class="number">8</span>. GOPATH	</div><div class="line">方法同GOROOT, 	</div><div class="line"></div><div class="line">备注:</div></pre></td></tr></table></figure>
-</li>
-</ol>
-<p>以上 $GOPATH 目录约定有三个子目录：</p>
-<p>src 存放源代码（比如：.go .c .h .s等）<br>pkg 编译后生成的文件（比如：.a）<br>bin 编译后生成的可执行文件（为了方便，可以把此目录加入到 $PATH 变量中，如果有多个gopath，那么使用${GOPATH//://bin:}/bin添加所有的bin目录）</p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="section">###apt-get安装(版本可能不是最新版,要安装最新版,需要使用源码安装):</span></div><div class="line">-----------</div></pre></td></tr></table></figure>
-<p>在terminal中输入go,根据系统提示,运行相关的 sudo apt-get xxgo    </p>
-<figure class="highlight asciidoc"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="section">###apt-get卸载:</span></div><div class="line">-----------</div></pre></td></tr></table></figure>
-<h1 id="卸载go"><a href="#卸载go" class="headerlink" title="卸载go"></a>卸载go</h1><p>sudo apt-get remove golang-go</p>
-<h1 id="卸载go并且删除相关配置"><a href="#卸载go并且删除相关配置" class="headerlink" title="卸载go并且删除相关配置"></a>卸载go并且删除相关配置</h1><p>sudo apt-get purge golang-go<br>```    </p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;###目标&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Revel+Xorm&lt;/li&gt;
-&lt;li&gt;处理请求,Get/Post/Put    &lt;/li&gt;
-&lt;li&gt;管理持久化,增删改查,模型确定和使用,更新升级数据库&lt;/li&gt;
-&lt;li&gt;查询数据, SQL语句&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;返回数据, R
-    
-    </summary>
-    
-      <category term="文档" scheme="https://antwork.github.io/categories/%E6%96%87%E6%A1%A3/"/>
-    
-    
-      <category term="Linux" scheme="https://antwork.github.io/tags/Linux/"/>
     
   </entry>
   
