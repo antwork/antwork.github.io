@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://antwork.github.io/"/>
-  <updated>2017-03-22T02:36:21.000Z</updated>
+  <updated>2017-04-24T23:14:38.000Z</updated>
   <id>https://antwork.github.io/</id>
   
   <author>
@@ -16,11 +16,64 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>重构代码疑问之 as? as as!</title>
+    <link href="https://antwork.github.io/2017/04/24/2017-4-24-Swift_usage1/"/>
+    <id>https://antwork.github.io/2017/04/24/2017-4-24-Swift_usage1/</id>
+    <published>2017-04-24T15:00:00.000Z</published>
+    <updated>2017-04-24T23:14:38.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>重构代码疑问之<b>as? as as!</b>    </p>
+<ol>
+<li>as 使用场景                </li>
+<li>as! 使用场景        </li>
+<li>as?        </li>
+<li>as? XXX 和 as! XXX?的区别                <a id="more"></a>    
+</li>
+</ol>
+<h4 id="1-as使用场景"><a href="#1-as使用场景" class="headerlink" title="1.as使用场景:"></a>1.as使用场景:</h4><p>1). 向上转型    </p>
+<figure class="highlight cs"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">class</span> <span class="title">Animal</span> &#123;&#125;</div><div class="line"><span class="keyword">class</span> <span class="title">Cat</span> : <span class="title">Animal</span> &#123;&#125;</div><div class="line"><span class="keyword">let</span> cat = Cat()</div><div class="line"><span class="keyword">let</span> animal = cat <span class="keyword">as</span> Animal</div></pre></td></tr></table></figure>
+<p>2). 消除二义性, 数值类型转换<br><figure class="highlight zephir"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> num1 = <span class="number">42</span> <span class="keyword">as</span> CGFloat</div><div class="line"><span class="keyword">let</span> num2 = <span class="number">42</span> <span class="keyword">as</span> <span class="keyword">Int</span></div><div class="line"><span class="keyword">let</span> num3 = <span class="number">42.5</span> <span class="keyword">as</span> <span class="keyword">Int</span></div><div class="line"><span class="keyword">let</span> num4 = (<span class="number">42</span> / <span class="number">2</span>) <span class="keyword">as</span> <span class="keyword">Double</span></div></pre></td></tr></table></figure></p>
+<p>3). switch语句中进行模式匹配<br>如果不知道一个对象是什么类型, 可以通过Switch语句来检测类型并进行相关处理.<br><figure class="highlight swift"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>&#123;&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span>: <span class="title">Animal</span> </span>&#123;&#125;</div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Dog</span>: <span class="title">Animal</span> </span>&#123;&#125; </div><div class="line"><span class="keyword">let</span> animal = <span class="type">Cat</span>()</div><div class="line"><span class="keyword">switch</span> animal &#123;</div><div class="line"><span class="keyword">case</span> <span class="keyword">let</span> cat <span class="keyword">as</span> <span class="type">Cat</span>:</div><div class="line">    <span class="built_in">print</span>(<span class="string">"cat class"</span>)</div><div class="line"><span class="keyword">case</span> <span class="keyword">let</span> dog <span class="keyword">as</span> <span class="type">Dog</span>:</div><div class="line">    <span class="built_in">print</span>(<span class="string">"dog class"</span>)</div><div class="line"><span class="keyword">default</span>:</div><div class="line">    <span class="built_in">print</span>(<span class="string">""</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="2-as-使用场景"><a href="#2-as-使用场景" class="headerlink" title="2. as!使用场景"></a>2. as!使用场景</h4><p>向下转型(Downcasting), 转换失败报runtime error<br><figure class="highlight nix"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> ani2: <span class="attr">Animal</span> = Cat()</div><div class="line"><span class="keyword">let</span> <span class="attr">cat</span> = ani2 as! Cat</div></pre></td></tr></table></figure></p>
+<h4 id="3-as"><a href="#3-as" class="headerlink" title="3.as?"></a>3.as?</h4><p>同as!,但转换失败返回nil, 成功返回Optinal对象<br><figure class="highlight nimrod"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> <span class="keyword">let</span> cat = animal <span class="keyword">as</span>? <span class="type">Cat</span> &#123;</div><div class="line">    // cat <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">nil</span></div><div class="line">&#125; <span class="keyword">else</span> &#123;</div><div class="line">    // cat <span class="keyword">is</span> <span class="keyword">nil</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="4-as-XXX-和-as-XXX"><a href="#4-as-XXX-和-as-XXX" class="headerlink" title="4. as? XXX 和 as! XXX?"></a>4. as? XXX 和 as! XXX?</h4><figure class="highlight vim"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> dict = NSDictionary()</div><div class="line">guard <span class="keyword">let</span> swiftDict = dict <span class="keyword">as</span>? [Strin<span class="variable">g:Any</span>] <span class="keyword">else</span> &#123; <span class="keyword">return</span> &#125;</div><div class="line">    </div><div class="line"><span class="keyword">if</span> <span class="keyword">let</span> tmp = swiftDict[<span class="string">"key"</span>] <span class="keyword">as</span>? String &#123;</div><div class="line">    <span class="keyword">print</span>(<span class="string">"\(tmp) is a string"</span>)</div><div class="line">&#125;</div><div class="line">    </div><div class="line"><span class="keyword">if</span> <span class="keyword">let</span> tmp = swiftDict[<span class="string">"key"</span>] as! String? &#123;</div><div class="line">    <span class="keyword">print</span>(<span class="string">"\(tmp) is a string"</span>)</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 编译不能通过, 因为无法确定swiftDict[<span class="string">"key"</span>] 向 String转是否是向上转型</div><div class="line">/*<span class="keyword">if</span> <span class="keyword">let</span> tmp = swiftDict[<span class="string">"key"</span>] <span class="keyword">as</span> String? &#123;</div><div class="line">    <span class="keyword">print</span>(<span class="string">"\(tmp) is a string"</span>)</div><div class="line">&#125;*/</div></pre></td></tr></table></figure>
+<p>两者区别在于 <code>as? String</code>会更安全, 当发现<code>tmp</code>不是<code>String</code>时返回<code>nil</code>, 否则返回一个<code>Optinal&lt;String&gt;</code><br>但是 <code>as! String?</code> 当 <code>tmp</code>不是一个<code>&lt;Optinal&gt;String</code>时会运行时崩溃, 因为它使用了<code>as!</code>将<code>swiftDict[&quot;key&quot;]</code>强制解包为一个<code>&lt;Optional&gt;String</code>, 但实际对象不为<code>Optional&lt;String&gt;</code>, 示例如下:                </p>
+<figure class="highlight xquery"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> dict = NSMutableDictionary()</div><div class="line">dict.setValue(NSNumber(value:<span class="number">1</span>), forKey: <span class="string">"key"</span>)</div><div class="line"></div><div class="line">guard <span class="keyword">let</span> swiftDict = dict <span class="keyword">as</span>? [String:Any] <span class="keyword">else</span> &#123; return &#125;</div><div class="line">    </div><div class="line"><span class="keyword">if</span> <span class="keyword">let</span> tmp = swiftDict[<span class="string">"key"</span>] <span class="keyword">as</span>! String? &#123;</div><div class="line">    print(<span class="string">"\(tmp) is a string"</span>)</div><div class="line">&#125;</div><div class="line">    </div><div class="line">// Error: Could not <span class="keyword">cast</span> <span class="keyword">value</span> <span class="keyword">of</span> type <span class="string">'__NSCFNumber'</span> (<span class="number">0x1017f3590</span>) <span class="keyword">to</span> <span class="string">'NSString'</span> (<span class="number">0x100dffc60</span>).</div><div class="line"><span class="keyword">if</span> <span class="keyword">let</span> tmp = swiftDict[<span class="string">"key"</span>] <span class="keyword">as</span>! String? &#123;</div><div class="line">    print(<span class="string">"\(tmp) is a string"</span>)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>参考网站:<br><a href="http://www.hangge.com/blog/cache/detail_1089.html" target="_blank" rel="external">Swift - as、as!、as?三种类型转换操作符使用详解（附样例）</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;重构代码疑问之&lt;b&gt;as? as as!&lt;/b&gt;    &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;as 使用场景                &lt;/li&gt;
+&lt;li&gt;as! 使用场景        &lt;/li&gt;
+&lt;li&gt;as?        &lt;/li&gt;
+&lt;li&gt;as? XXX 和 as! XXX?的区别
+    
+    </summary>
+    
+      <category term="Swift" scheme="https://antwork.github.io/categories/Swift/"/>
+    
+    
+      <category term="swift" scheme="https://antwork.github.io/tags/swift/"/>
+    
+      <category term="as" scheme="https://antwork.github.io/tags/as/"/>
+    
+      <category term="as?" scheme="https://antwork.github.io/tags/as/"/>
+    
+      <category term="as!" scheme="https://antwork.github.io/tags/as/"/>
+    
+      <category term="Optional" scheme="https://antwork.github.io/tags/Optional/"/>
+    
+  </entry>
+  
+  <entry>
     <title>resizableImage的疑问</title>
     <link href="https://antwork.github.io/2017/03/22/2017-01-21-resizableImage/"/>
     <id>https://antwork.github.io/2017/03/22/2017-01-21-resizableImage/</id>
     <published>2017-03-22T01:40:53.000Z</published>
-    <updated>2017-03-22T02:36:21.000Z</updated>
+    <updated>2017-03-22T02:39:05.000Z</updated>
     
     <content type="html"><![CDATA[<p>resizableImage拉伸图片时以下两种情况具体怎么处理的?    </p>
 <ol>
@@ -41,6 +94,7 @@
 <p><strong>Q</strong>: 水平怎么拉伸的?<br><strong>A</strong>: 原图inset取出四角后四边剩余部分做成萝卜章, 水平\垂直看到空白就盖(<em>填充区域内有效</em>)</p>
 <p><strong>Q</strong>: 中间怎么填充的<br><strong>A</strong>: 将原图inset中间部分取出做成萝卜章, 然后看到空白就盖萝卜章(<em>填充区域内有效</em>)</p>
 <p><strong>脑洞</strong>: 如果ImageView比图片还小会怎样呢?<br><strong>A</strong>: 如图2所示, 中间会显示很小, 四角会有覆盖的情况</p>
+<h4 id="鸣谢"><a href="#鸣谢" class="headerlink" title="鸣谢:"></a>鸣谢:</h4><p>感谢木木鱼提供的图片</p>
 <h4 id="图片资源"><a href="#图片资源" class="headerlink" title="图片资源:"></a>图片资源:</h4><p>原图:<br><img src="/assets/resizableImage1.png" alt="原图"></p>
 <p>图1<br><img src="/assets/resizableImage2.png" alt="大拉伸图"> </p>
 <p>图2<br><img src="/assets/resizableImage3.png" alt="缩小图"> </p>
@@ -1096,30 +1150,6 @@ class User(UserMixin, db.Model):
     
     
       <category term="json" scheme="https://antwork.github.io/tags/json/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ios NSObject学习</title>
-    <link href="https://antwork.github.io/2015/02/06/2015-02-06-objectnote/"/>
-    <id>https://antwork.github.io/2015/02/06/2015-02-06-objectnote/</id>
-    <published>2015-02-06T01:46:12.000Z</published>
-    <updated>2017-01-21T07:59:27.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>加载, 初始化</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;加载, 初始化&lt;/p&gt;
-
-    
-    </summary>
-    
-      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
-    
-    
-      <category term="ios" scheme="https://antwork.github.io/tags/ios/"/>
     
   </entry>
   
