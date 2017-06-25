@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://antwork.github.io/"/>
-  <updated>2017-04-24T23:14:38.000Z</updated>
+  <updated>2017-06-25T07:42:55.000Z</updated>
   <id>https://antwork.github.io/</id>
   
   <author>
@@ -14,6 +14,71 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>iOS状态栏颜色变更</title>
+    <link href="https://antwork.github.io/2017/06/25/2017-6-25-StatusBarColor/"/>
+    <id>https://antwork.github.io/2017/06/25/2017-6-25-StatusBarColor/</id>
+    <published>2017-06-25T02:00:00.000Z</published>
+    <updated>2017-06-25T07:42:55.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>iOS状态栏颜色变更    </p>
+<ol>
+<li>怎么改变状态栏颜色                </li>
+<li>UINavigationController下的状态栏不起作用怎么办                    <a id="more"></a>    
+</li>
+</ol>
+<h4 id="实验"><a href="#实验" class="headerlink" title="实验:"></a>实验:</h4><p>前提1: 没有导航栏的单控制器工程<br>前提2:    UIViewControllerBasedStatusBarAppearance = false</p>
+<p>实验一:<br>条件. Target-General-StatusBarStyle-default<br><em>结果: <img src="/assets/UIViewControllerBasedStatusBarAppearance1.png" alt="状态栏黑色"></em>        </p>
+<p>实验二:<br>条件: Target-General-StatusBarStyle-lightContent<br><em>结果: <img src="/assets/UIViewControllerBasedStatusBarAppearance2.png" alt="状态栏白色"></em><br>实验三:<br>条件1: Target-General-StatusBarStyle-lightContent<br>条件2: ViewController重写<code>preferredStatusBarStyle</code>方法        </p>
+<figure class="highlight kotlin"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">override</span> <span class="keyword">var</span> preferredStatusBarStyle: UIStatusBarStyle &#123;</div><div class="line">    <span class="keyword">return</span> .<span class="keyword">default</span></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><em>结果:    结果同实验二, 状态栏并没有使用<code>preferredStatusBarStyle</code>显示黑色导航栏, 而是显示了白色状态栏</em></p>
+<p>实验四:        </p>
+<p>条件1: Target-General-StatusBarStyle-lightContent<br>条件2: 在ViewController的<code>ViewDidLoad</code>方法中添加代码<br><figure class="highlight objectivec"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">override func viewDidLoad() &#123;</div><div class="line">    <span class="keyword">super</span>.viewDidLoad()</div><div class="line"></div><div class="line">    <span class="built_in">UIApplication</span>.shared.setStatusBarStyle(.default, animated: <span class="literal">true</span>)</div><div class="line">&#125;</div><div class="line">```			</div><div class="line"></div><div class="line">*结果:	结果同实验一, 显示黑色导航栏*</div><div class="line"></div><div class="line">**总结一**: <span class="built_in">UIViewControllerBasedStatusBarAppearance</span>=<span class="literal">false</span>时, 影响导航栏颜色的方式有两个:		</div><div class="line"></div><div class="line"> 	<span class="number">1.</span> info.plist中的<span class="built_in">UIStatusBarStyle</span>(效果同Target-General-StatusBarStyle-); 		</div><div class="line"> 	<span class="number">2.</span> 通过配置<span class="built_in">UIApplication</span>的setStatusBarStyle方法;</div><div class="line"></div><div class="line">**更改前提条件**		</div><div class="line">前提<span class="number">1</span>: 没有导航栏的单控制器工程			</div><div class="line">前提<span class="number">2</span>:	<span class="built_in">UIViewControllerBasedStatusBarAppearance</span> = <span class="literal">true</span></div><div class="line"></div><div class="line">实验五:		</div><div class="line">条件<span class="number">1</span>: ViewController没有重写`preferredStatusBarStyle`方法	</div><div class="line">条件<span class="number">2</span>: Target-General-StatusBarStyle-lightContent(Target-General-StatusBarStyle-<span class="keyword">default</span>)</div><div class="line"></div><div class="line">*结果: 状态栏一直为黑色*</div><div class="line"></div><div class="line">实验六:		</div><div class="line">条件: 重写ViewController 的`preferredStatusBarStyle `方法</div></pre></td></tr></table></figure></p>
+<p>override var preferredStatusBarStyle: UIStatusBarStyle {<br>    return .default<br>}<br><figure class="highlight autohotkey"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="symbol">*结果:</span> 状态栏黑色(设置Target-General-StatusBarStyle-lightContent不应县给结果)*</div><div class="line"></div><div class="line"><span class="symbol">实验七:</span>		</div><div class="line"><span class="symbol">条件:</span> 重写ViewController 的`preferredStatusBarStyle `方法</div></pre></td></tr></table></figure></p>
+<p>override var preferredStatusBarStyle: UIStatusBarStyle {<br>    return .lightContent<br>}<br><figure class="highlight clean"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">*结果: 状态栏白色(设置Target-General-StatusBarStyle-default不影响结果)*</div><div class="line"></div><div class="line">**结果: UIViewControllerBasedStatusBarAppearance基于控制器的状态栏显示, 实际是由`preferredStatusBarStyle`返回值决定, 默认`default`为黑色文字, `lightContent`显示白色文字**</div><div class="line"></div><div class="line">实验八:	</div><div class="line">将ViewController放入UINavigationController中		</div><div class="line">*结果: `preferredStatusBarStyle`不起作用, `Target-General-StatusBarStyle-lightContent`也不起作用*					</div><div class="line">*结果分析: UINavigationController作为容器返回了它的preferredStatusBarStylee*</div><div class="line"></div><div class="line">为了解决这个问题, 引入了一个自定义UINavigtaionController, 将Storyboard中的导航栏<span class="keyword">class</span> 替换为`CustomNavigationController `</div></pre></td></tr></table></figure></p>
+<p>import UIKit</p>
+<p>class CustomNavigationController : UINavigationController {<br>    override var preferredStatusBarStyle: UIStatusBarStyle {<br>        return .lightContent<br>    }<br>}<br><figure class="highlight markdown"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">问题解决:</div><div class="line">![<span class="string">状态栏白色</span>](<span class="link">/assets/UIViewControllerBasedStatusBarAppearance3.png</span>)</div><div class="line"></div><div class="line">但是又引入新问题了, 如果继承了导航栏, 如果需要变换导航栏风格,就需要经常的变换CustomNavigation的<span class="code">`preferredStatusBarStyle`</span>, 为了解决这个问题, 苹果引入了<span class="code">`childViewControllerForStatusBarStyle `</span>, 将CustomNavigationController更新如下, 则状态栏的会使用栈顶的ViewController的<span class="code">`preferredStatusBarStyle `</span>:</div></pre></td></tr></table></figure></p>
+<p>import UIKit</p>
+<p>class CustomNavigationController : UINavigationController {<br>    override var childViewControllerForStatusBarStyle: UIViewController? {<br>        return self.topViewController<br>    }<br>}<br>```    </p>
+<p>If your container view controller derives its status bar style from one of its child view controllers, implement this method and return that child view controller. If you return nil or do not override this method, the status bar style for self is used. If the return value from this method changes, call the<br>setNeedsStatusBarAppearanceUpdate()<br> method.</p>
+<p>简而言之就是容器控制器需要根据子控制器来决定状态栏颜色, 实现该方法并返回对应的子控制器. 当返回nil或者没有实现该方法则使用默认的, 如果<code>childViewControllerForStatusBarStyle</code>的返回值更新了, 需要调用<code>setNeedsStatusBarAppearanceUpdate</code></p>
+<p>到此关于状态栏变更的内容就讲完了, 主要分两种情况:        </p>
+<ol>
+<li>有导航栏, 并且希望中途修改导航栏颜色, 则自定义一个导航栏, 配置其<code>childViewControllerForStatusBarStyle</code>为栈顶控制器, 然后在需要自定义颜色的控制器中重写<code>preferredStatusBarStyle</code>方法        </li>
+<li>没有导航栏并且希望中途改变导航栏颜色, 则直接重写<code>preferredStatusBarStyle</code>方法即可</li>
+</ol>
+<p><strong>备注</strong>        </p>
+<ol>
+<li><code>UIApplication.shared.setStatusBarStyle(.default, animated: true)</code>方法已过期, 不建议使用, 因此<code>UIViewControllerBasedStatusBarAppearance=false</code>也是不被推荐    </li>
+<li>UIViewControllerBasedStatusBarAppearance默认为true, 所以在info.plist中不需要添加该配置        </li>
+<li>总而言之: 忽略UIViewControllerBasedStatusBarAppearance, 使用<code>childViewControllerForStatusBarStyle</code>和<code>preferredStatusBarStyle</code>来管理状态栏颜色.</li>
+</ol>
+<h2 id="参考"><a href="#参考" class="headerlink" title="参考:        "></a>参考:        </h2><p><a href="https://developer.apple.com/documentation/uikit/uiviewcontroller/1621433-childviewcontrollerforstatusbars" target="_blank" rel="external">https://developer.apple.com/documentation/uikit/uiviewcontroller/1621433-childviewcontrollerforstatusbars</a>        </p>
+<p><a href="http://www.jianshu.com/p/0d4337b2e18a" target="_blank" rel="external">http://www.jianshu.com/p/0d4337b2e18a</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;iOS状态栏颜色变更&lt;/b&gt;    &lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;怎么改变状态栏颜色                &lt;/li&gt;
+&lt;li&gt;UINavigationController下的状态栏不起作用怎么办
+    
+    </summary>
+    
+      <category term="Swift" scheme="https://antwork.github.io/categories/Swift/"/>
+    
+    
+      <category term="swift" scheme="https://antwork.github.io/tags/swift/"/>
+    
+      <category term="UIViewControllerBasedStatusBarAppearance" scheme="https://antwork.github.io/tags/UIViewControllerBasedStatusBarAppearance/"/>
+    
+      <category term="childViewControllerForStatusBarStyle" scheme="https://antwork.github.io/tags/childViewControllerForStatusBarStyle/"/>
+    
+      <category term="状态栏" scheme="https://antwork.github.io/tags/%E7%8A%B6%E6%80%81%E6%A0%8F/"/>
+    
+  </entry>
   
   <entry>
     <title>重构代码疑问之 as? as as!</title>
@@ -1115,41 +1180,6 @@ class User(UserMixin, db.Model):
     
     
       <category term="ios" scheme="https://antwork.github.io/tags/ios/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>json基础及解析</title>
-    <link href="https://antwork.github.io/2015/02/09/2015-02-09-json-analysis/"/>
-    <id>https://antwork.github.io/2015/02/09/2015-02-09-json-analysis/</id>
-    <published>2015-02-09T01:46:12.000Z</published>
-    <updated>2017-01-21T07:59:28.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="json格式解析"><a href="#json格式解析" class="headerlink" title="json格式解析"></a>json格式解析</h2><ol>
-<li>格式2.     <ul>
-<li>json两种构建方法:键值对组,通俗的说就是字典        </li>
-<li>有序的值组,通俗的说就是数组    </li>
-</ul>
-</li>
-<li>元素构成3.<br> 2.1 object(字典),以一个 { 开始,以 } 结束, 每组子元素以字符串为key:value形式由,分隔开来<br> <img src="http://www.json.org/object.gif" alt=""><br> 示例:<code>{&quot;name&quot;:&quot;xuqiang&quot;,&quot;gender&quot;:&quot;男&quot;}</code><br> 2.2 array(数组),以一个 [ 开始, 以 ] 结束,每组value由, 分隔<br> <img src="http://www.json.org/array.gif" alt=""><br> 示例:<code>[&quot;张三&quot;,&quot;李四&quot;, &quot;王五&quot;]</code><br> 2.3 value(值), 可以是通过””包裹的字符串,可以是数字,可以是bool值(true,false),或者null,或者一个object(2.1),或者一个value(2.2),结构可以嵌套<br> <img src="http://www.json.org/value.gif" alt=""><br> 2.4 string(字符串),通过双引号包裹,如果中间需要加入引号,则需要使用\进行转移,如 <code>&quot;\&quot;&quot;</code>,表示有一个引号,下图列出了需要转义的字符<br> <img src="http://www.json.org/string.gif" alt=""><br> 2.5 number(数字),一般使用十进制,不进行详细说明<br> <img src="http://www.json.org/number.gif" alt=""></li>
-<li>在线解析辅助<br> <a href="http://json.parser.online.fr" target="_blank" rel="external">www.bejson.com</a><br> <a href="http://json.parser.online.fr" target="_blank" rel="external">http://json.parser.online.fr</a></li>
-<li>使用示例:</li>
-<li>iOS解析JSON</li>
-</ol>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;h2 id=&quot;json格式解析&quot;&gt;&lt;a href=&quot;#json格式解析&quot; class=&quot;headerlink&quot; title=&quot;json格式解析&quot;&gt;&lt;/a&gt;json格式解析&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;格式2.     &lt;ul&gt;
-&lt;li&gt;json两种构建方法:键值对组,通俗的说就是
-    
-    </summary>
-    
-      <category term="日志" scheme="https://antwork.github.io/categories/%E6%97%A5%E5%BF%97/"/>
-    
-    
-      <category term="json" scheme="https://antwork.github.io/tags/json/"/>
     
   </entry>
   
